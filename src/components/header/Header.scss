@@ -1,0 +1,93 @@
+header {
+    // #ff8506
+    margin: 20px auto 0;
+    padding: 0 10px;
+    max-width: 1140px;
+    .header__main {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .header__logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 200px;
+            height: 80px;
+            background-color: #ff8506;
+            color: #fff;
+            font-size: 24px;
+            font-weight: 700;
+            border-radius: 20px;
+        }
+        .header__type {
+            display: flex;
+            align-items: center;
+            .header__type-text {
+                color: #95979a;
+                font-size: 14px;
+                line-height: 16px;
+                margin-right: 10%;
+                white-space: nowrap;
+            }
+            .header__type-button {
+                border: 1px solid #ff8506;
+                color: #ff8506;
+                padding-top: 5px;
+                padding-bottom: 6px;
+                max-width: 175px;
+                border-width: 2px;
+                letter-spacing: 0.03em;
+                border-radius: 3px;
+                background: none;
+                font-size: 12px;
+                cursor: pointer;
+                .header-button {
+                }
+            }
+        }
+        .header__contacts {
+            color: #222;
+            font-weight: 600;
+            line-height: 21px;
+            font-size: 20px;
+            text-align: right;
+        }
+    }
+    .header__nav {
+        margin-top: 20px;
+        height: 60px;
+        background-color: #ff8506;
+        color: #fff;
+        nav {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 20px;
+            .nav-item {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 60px;
+                width: 100%;
+                &:hover{
+                    background-color: #ffab50; 
+                }
+                &:active{
+                    background-color: #ffab50; 
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 780px) {
+    .header__main {
+        .header__type {
+            .header__type-text {
+                display: none;
+            }   
+        }
+    }
+  
+}
