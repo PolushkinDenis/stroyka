@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/stroyka/static/css/main.6a155152.css",
-    "main.js": "/stroyka/static/js/main.b7f34ba3.js",
+    "main.js": "/stroyka/static/js/main.c18089a0.js",
     "static/media/1-1.png": "/stroyka/static/media/1-1.1cd7056bf898ff470f86.png",
     "index.html": "/stroyka/index.html",
     "main.6a155152.css.map": "/stroyka/static/css/main.6a155152.css.map",
-    "main.b7f34ba3.js.map": "/stroyka/static/js/main.b7f34ba3.js.map"
+    "main.c18089a0.js.map": "/stroyka/static/js/main.c18089a0.js.map"
   },
   "entrypoints": [
     "static/css/main.6a155152.css",
-    "static/js/main.b7f34ba3.js"
+    "static/js/main.c18089a0.js"
   ]
 }
