@@ -70,11 +70,11 @@ header {
                 align-items: center;
                 height: 60px;
                 width: 100%;
-                &:hover{
-                    background-color: #ffab50; 
+                &:hover {
+                    background-color: #ffab50;
                 }
-                &:active{
-                    background-color: #ffab50; 
+                &:active {
+                    background-color: #ffab50;
                 }
             }
         }
@@ -86,8 +86,25 @@ header {
         .header__type {
             .header__type-text {
                 display: none;
-            }   
+            }
         }
     }
-  
+}
+@media (max-width: 500px) {
+    header {
+        .header__main {
+            .header__logo {
+                width: auto;
+                height: 80px;
+                padding: 0 2%;
+                height: 60px;
+                font-size: 14px;
+            }
+            .header__type {
+            .header__type-button {
+                display: none;
+            }
+        }
+        }
+    }
 }

@@ -12,7 +12,7 @@ const App = () => {
     <Header />
       <Routes>
           <>
-            <Route path="/" element={<Main />} />
+            <Route path="/stroyka" element={<Main />} />
           </>
       </Routes>
     </>
