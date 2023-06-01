@@ -60,9 +60,8 @@ header {
         .header__contacts-mob {
             display: none;
         }
-        
     }
-    
+
     .header__nav {
         margin-top: 20px;
         height: 60px;
@@ -80,6 +79,7 @@ header {
                 align-items: center;
                 height: 60px;
                 width: 100%;
+                flex-direction: column;
                 &:hover {
                     background-color: #ffab50;
                 }
@@ -88,10 +88,38 @@ header {
                 }
             }
         }
+        .about-company {
+            &:hover {
+                .navigate__info {
+                    display: flex;
+                }
+            }
+            
+        }
+        .navigate__info, .type-about {
+            display: none;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 100;
+            margin-top: 30px;
+            background-color: #fff;
+            width: 100%;
+            height: 185%;
+            .navigate__type-link {
+                padding: 10px;
+                background-color: #fff;
+                border: 1px solid #ff8506;
+                font-size: 20px;
+                text-decoration: none;
+                color: #ff8506;
+                margin-right: 10px;
+                margin-bottom: 10px;
+            }
+        }
     }
-   
 }
-.header__link, .phone-number {
+.header__link,
+.phone-number {
     text-decoration: none;
     color: #000;
 }
@@ -101,7 +129,8 @@ header {
     color: #fff;
     display: flex;
     align-items: center;
-    box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+        0px 1px 3px 0px rgba(0, 0, 0, 0.12);
     a {
         color: #fff;
         margin-left: 16px;

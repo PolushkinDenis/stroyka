@@ -1,0 +1,19 @@
+.designing {
+    margin: 0 auto;
+    padding: 0 10px;
+    max-width: 1140px;
+    .designing__container-img {
+        display: flex;
+        justify-content: center;
+        .designing__img {
+            max-width: 100%;
+            max-height: 400px;
+        }
+        
+    }
+    .designing__container {
+        li{
+            margin-bottom: 10px;
+          }
+    }
+}
