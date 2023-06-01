@@ -1,31 +1,39 @@
 {
   "files": {
-    "main.css": "/stroyka/static/css/main.a878811d.css",
-    "main.js": "/stroyka/static/js/main.efea6478.js",
+    "main.css": "/stroyka/static/css/main.27c78bd7.css",
+    "main.js": "/stroyka/static/js/main.da45e9cd.js",
     "static/media/3-2.jpg": "/stroyka/static/media/3-2.1073e2719459f8242343.jpg",
     "static/media/5-1.jpg": "/stroyka/static/media/5-1.7145d361bcb82a249229.jpg",
     "static/media/6-2.jpg": "/stroyka/static/media/6-2.044894f4eb91874b1cf9.jpg",
+    "static/media/sooruzhenie.jpg": "/stroyka/static/media/sooruzhenie.a0b65f0144678eb84367.jpg",
+    "static/media/fundament.jpg": "/stroyka/static/media/fundament.e2e9aa13c9beebe92efb.jpg",
+    "static/media/fasad.jpg": "/stroyka/static/media/fasad.472d229e5fb10a45239d.jpg",
     "static/media/2-2.jpg": "/stroyka/static/media/2-2.99b62593283c0bb2d780.jpg",
     "static/media/3-1.jpg": "/stroyka/static/media/3-1.4578aff24ae6626e6166.jpg",
     "static/media/6-3.jpg": "/stroyka/static/media/6-3.56daec33cba0250b4761.jpg",
     "static/media/2-3.jpg": "/stroyka/static/media/2-3.c40ca6048d7475ab56ba.jpg",
     "static/media/4-2.jpg": "/stroyka/static/media/4-2.28d4104ccc43c3a65d2b.jpg",
     "static/media/1-1.png": "/stroyka/static/media/1-1.1cd7056bf898ff470f86.png",
+    "static/media/mansardy.jpeg": "/stroyka/static/media/mansardy.531472d79d9c434642fb.jpeg",
     "static/media/3-3.jpg": "/stroyka/static/media/3-3.458d452ac149b60d56f8.jpg",
     "static/media/4-1.jpg": "/stroyka/static/media/4-1.f5d876bd0ea7ffb1fcdb.jpg",
+    "static/media/avtomoyka.jpg": "/stroyka/static/media/avtomoyka.1b6cb9dffb666a963072.jpg",
     "static/media/1-3.jpg": "/stroyka/static/media/1-3.03cc98a6423d5699a1b1.jpg",
+    "static/media/veranda.jpg": "/stroyka/static/media/veranda.213fe4d4ac213cc19940.jpg",
     "static/media/5-2.jpg": "/stroyka/static/media/5-2.6b003ffdc810ff9642e0.jpg",
+    "static/media/roof.jpg": "/stroyka/static/media/roof.2fba3c6c684810b9e58f.jpg",
+    "static/media/garage.jpg": "/stroyka/static/media/garage.7412b5a54f0e202f50b5.jpg",
     "static/media/6-1.jpeg": "/stroyka/static/media/6-1.c1ec4d2e93a18809fb0f.jpeg",
     "static/media/5-3.jpeg": "/stroyka/static/media/5-3.442f274e1e18b7df8b6b.jpeg",
     "static/media/4-3.jpg": "/stroyka/static/media/4-3.42dc8a170b7cd1f9f207.jpg",
     "static/media/2-1.jpg": "/stroyka/static/media/2-1.12929f6545bc03759e66.jpg",
     "static/media/1-2.jpg": "/stroyka/static/media/1-2.b1e644dd41bde2d4ddcd.jpg",
     "index.html": "/stroyka/index.html",
-    "main.a878811d.css.map": "/stroyka/static/css/main.a878811d.css.map",
-    "main.efea6478.js.map": "/stroyka/static/js/main.efea6478.js.map"
+    "main.27c78bd7.css.map": "/stroyka/static/css/main.27c78bd7.css.map",
+    "main.da45e9cd.js.map": "/stroyka/static/js/main.da45e9cd.js.map"
   },
   "entrypoints": [
-    "static/css/main.a878811d.css",
-    "static/js/main.efea6478.js"
+    "static/css/main.27c78bd7.css",
+    "static/js/main.da45e9cd.js"
   ]
 }
