@@ -9,7 +9,7 @@ interface DesigningProps {
 
 const Designing: FC<DesigningProps> = ({ image, title, children }) => {
     return (
-        <div className='designing'>
+        <main className='designing'>
             <h1>{title}</h1>
             <div className='designing__container-img'>
                 <img className='designing__img' src={image} />
@@ -17,7 +17,7 @@ const Designing: FC<DesigningProps> = ({ image, title, children }) => {
             <div className='designing__container'>
                 {children}
             </div>
-        </div>
+        </main>
     )
 }
 

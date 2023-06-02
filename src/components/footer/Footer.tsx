@@ -10,7 +10,7 @@ const Footer: FC = () => {
     return (
         <footer>
             <div className="footer__content">
-                <div>
+                <div className="footer__main">
                     <NavLink to="/stroyka" className="footer__content-logo">
                         <CarpenterIcon sx={{ color: "#ff8506" }} />СТРОЙКА.РФ
                     </NavLink>

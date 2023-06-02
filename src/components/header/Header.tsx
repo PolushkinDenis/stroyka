@@ -41,13 +41,14 @@ const Header: FC = () => {
                     <button className="header__type-button">САМАРА</button>
                 </div>
                 <div className="header__contacts">
+                    <LocalPhoneIcon sx={{color: "#ff8506"}} />
                     <a href="tel:+79879876136">+7 (987) 987-61-36</a>
                 </div>
                 <div className="header__contacts-mob">
                     {/* PHONE */}
                     <Box sx={{ flexGrow: 0 }}>
                         <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                            <LocalPhoneIcon />
+                            <LocalPhoneIcon sx={{color: "#ff8506"}}/>
                         </IconButton>
                         <Menu
                             sx={{ mt: '45px' }}
@@ -249,7 +250,7 @@ const Header: FC = () => {
                             </Accordion>
                             <div className="contacts__mob-link">
                                 <Typography sx={{ fontFamily: `'Comfortaa', cursive`, textDecoration: 'none' }}>
-                                    <NavLink className="header__link" to="/stroyka">КОНТАКТЫ</NavLink>
+                                    <NavLink className="header__link" to="/stroyka/contacts">КОНТАКТЫ</NavLink>
                                 </Typography>
                             </div>
                         </Box>
@@ -320,7 +321,7 @@ const Header: FC = () => {
                         <NavLink className="navigate__type-link" to="/stroyka">Ремонт кровли </NavLink>
                     </div>
                 </div>
-                <div className="nav-item">КОНТАКТЫ</div>
+                <NavLink to='/stroyka/contacts' className="nav-item">КОНТАКТЫ</NavLink>
             </nav>
         </header>
     )

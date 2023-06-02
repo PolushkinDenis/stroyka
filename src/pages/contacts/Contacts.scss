@@ -1,0 +1,39 @@
+.contacts {
+    max-width: 1140px;
+    margin: 0 auto;
+    .contacts__info {
+        display: flex;
+        justify-content: space-between;
+        .info-city {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 80px;
+            height: 70px;
+            background-color: #ff8506;
+            color: #fff;
+            font-weight: 700;
+            border-radius: 3px;
+        }
+        .info__box {
+            display: flex;
+            .info__box-item {
+                display: flex;
+                .info-img {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 80px;
+                    height: 70px;
+                    background-color: #ff8506;
+                    border-radius: 3px;
+                }
+                .info__box-details {
+                    display: flex;
+                    flex-direction: column;
+                    margin-left: 10%;
+                }
+            }
+        }
+    }
+}

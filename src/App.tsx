@@ -11,6 +11,7 @@ import Structure from './pages/disign/structure/Structure';
 import Fasad from './pages/disign/fasad/Fasad';
 import Fundament from './pages/disign/fundament/Fundament';
 import Footer from './components/footer/Footer';
+import Contacts from './pages/contacts/Contacts';
 
 const App = () => {
   return (
@@ -27,6 +28,8 @@ const App = () => {
             <Route path="/stroyka/sooruzhenie" element={<Structure />} />
             <Route path="/stroyka/fasad" element={<Fasad />} />
             <Route path="/stroyka/fundament" element={<Fundament />} />
+            <Route path="/stroyka/contacts" element={<Contacts />} />
+
           </>
       </Routes>
       <Footer />

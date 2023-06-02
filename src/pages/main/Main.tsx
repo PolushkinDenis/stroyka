@@ -6,7 +6,7 @@ const Main: FC = () => {
 
 
     return (
-        <div className="main">
+        <main className="main">
             <MainGallery />
             <h1 className="main-h1">Проектирование, строительство, ремонт под ключ в Самаре</h1>
             <div className="main-info">
@@ -35,7 +35,7 @@ const Main: FC = () => {
                     гарантия.
                 </p>
             </div>
-        </div>
+        </main>
     )
 }
 
