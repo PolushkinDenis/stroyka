@@ -10,6 +10,7 @@ import Mansardy from './pages/disign/mansardy/Mansardy';
 import Structure from './pages/disign/structure/Structure';
 import Fasad from './pages/disign/fasad/Fasad';
 import Fundament from './pages/disign/fundament/Fundament';
+import Footer from './components/footer/Footer';
 
 const App = () => {
   return (
@@ -26,9 +27,9 @@ const App = () => {
             <Route path="/stroyka/sooruzhenie" element={<Structure />} />
             <Route path="/stroyka/fasad" element={<Fasad />} />
             <Route path="/stroyka/fundament" element={<Fundament />} />
-
           </>
       </Routes>
+      <Footer />
     </>
   )
 

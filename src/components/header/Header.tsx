@@ -38,11 +38,10 @@ const Header: FC = () => {
                 </NavLink>
                 <div className="header__type">
                     <div className="header__type-text">Проектно-строительная компания</div>
-                    <button className="header__type-button"><div className="header-button"></div> САМАРА</button>
+                    <button className="header__type-button">САМАРА</button>
                 </div>
                 <div className="header__contacts">
                     <a href="tel:+79879876136">+7 (987) 987-61-36</a>
-
                 </div>
                 <div className="header__contacts-mob">
                     {/* PHONE */}
@@ -257,7 +256,7 @@ const Header: FC = () => {
                     </Drawer>
                 </div>
             </div>
-            <div className="header__nav">
+            {/* <div className="header__nav">
                 <nav>
                     <div className="nav-item ">
                         О КОМПАНИИ
@@ -279,7 +278,50 @@ const Header: FC = () => {
                     <NavLink className="navigate__type-link" to="/stroyka/fasad">Фасады</NavLink>
                     <NavLink className="navigate__type-link" to="/stroyka/fundament">Фундамент</NavLink>
                 </div>
-            </div>
+            </div> */}
+            <nav className="navbar">
+                <div className="nav-item ">О КОМПАНИИ</div>
+                <div className="dropdown">
+                    <button className="dropbtn">ПРОЕКТИРОВАНИЕ
+                        <i className="fa fa-caret-down"></i>
+                    </button>
+                    <div className="dropdown-content">
+                        <NavLink className="navigate__type-link" to="/stroyka/carwash">Автомойки</NavLink>
+                        <NavLink className="navigate__type-link" to="/stroyka/veranda">Веранды</NavLink>
+                        <NavLink className="navigate__type-link" to="/stroyka/garage">Гаражи</NavLink>
+                        <NavLink className="navigate__type-link" to="/stroyka/garage">Гаражи</NavLink>
+                        <NavLink className="navigate__type-link" to="/stroyka/roof">Крыши</NavLink>
+                        <NavLink className="navigate__type-link" to="/stroyka/mansardy">Мансарды</NavLink>
+                        <NavLink className="navigate__type-link" to="/stroyka/sooruzhenie">Сооружения</NavLink>
+                        <NavLink className="navigate__type-link" to="/stroyka/fasad">Фасады</NavLink>
+                        <NavLink className="navigate__type-link" to="/stroyka/fundament">Фундамент</NavLink>
+                    </div>
+                </div>
+                <div className="nav-item">ПРОЕКТЫ</div>
+                <div className="dropdown">
+                    <button className="dropbtn">УСЛУГИ
+                        <i className="fa fa-caret-down"></i>
+                    </button>
+                    <div className="dropdown-content">
+                        <NavLink className="navigate__type-link" to="/stroyka">Пристройка к дому</NavLink>
+                        <NavLink className="navigate__type-link" to="/stroyka">Капитальный ремонт квартир</NavLink>
+                        <NavLink className="navigate__type-link" to="/stroyka">Возведение фундамента</NavLink>
+                    </div>
+                </div>
+                <div className="dropdown">
+                    <button className="dropbtn">РЕМОНТ
+                        <i className="fa fa-caret-down"></i>
+                    </button>
+                    <div className="dropdown-content">
+                        <NavLink className="navigate__type-link" to="/stroyka">Ремонт балконных плит</NavLink>
+                        <NavLink className="navigate__type-link" to="/stroyka">Пристройка гаража</NavLink>
+                        <NavLink className="navigate__type-link" to="/stroyka">Ремонт зданий</NavLink>
+                        <NavLink className="navigate__type-link" to="/stroyka">Ремонт частного дома</NavLink>
+                        <NavLink className="navigate__type-link" to="/stroyka">Ремонт кровли </NavLink>
+                    </div>
+                </div>
+                <div className="nav-item">КОНТАКТЫ</div>
+            </nav>
         </header>
     )
 }
