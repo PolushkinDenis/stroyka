@@ -24,27 +24,33 @@ import img_63 from '../../images/mainGallery/6-3.jpg'
 import { NavLink } from "react-router-dom";
 
 const MainGallery: FC = () => {
-    
     const [images, setImages] = useState<string[]>([])
 
-    const changeImages = (position: number) => {
-        if(position >= 3) {
-            position = 0
-        }
-        console.log(position)
-        const img = [[img_11, img_12, img_13], [img_21, img_22, img_23], [img_31, img_32, img_33] , [img_41, img_42, img_43], [img_51, img_52, img_53] , [img_61, img_62, img_63],]
-        const activeImg = []
-        for(let i = 0; i<6; i++ ) {
-            activeImg.push(img[i][position])
-        }
-        setImages(activeImg)
-        setTimeout(() => {
-            changeImages(++position)
-        }, 3000)
+    const changeImages = () => {
+        let position = 0
+        return (() => {
+            if(position >= 3) {
+                position = 0
+            }
+            console.log(position)
+            const img = [[img_11, img_12, img_13], [img_21, img_22, img_23], [img_31, img_32, img_33] , [img_41, img_42, img_43], [img_51, img_52, img_53] , [img_61, img_62, img_63],]
+            const activeImg = []
+            for(let i = 0; i<6; i++ ) {
+                activeImg.push(img[i][position])
+            }
+            setImages(activeImg)
+            position++
+        })
     }
 
     useEffect(() => {
-        changeImages(0)
+        const changeImagesFun = changeImages()
+        const timerId = setInterval(() => {
+            changeImagesFun()
+        }, 3000)
+        return () => {
+            clearTimeout(timerId)
+        }
     }, [])
 
     console.log(images)

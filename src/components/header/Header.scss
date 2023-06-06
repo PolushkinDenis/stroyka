@@ -178,6 +178,8 @@ header {
     justify-content: space-between;
     margin-top: 20px;
     height: 60px;
+    border-radius: 2px;
+ 
 }
 
 .navbar a {
@@ -185,7 +187,7 @@ header {
     font-size: 16px;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 21px 16px;
     text-decoration: none;
 }
 .nav-item {
