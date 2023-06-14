@@ -8,11 +8,18 @@ import { NavLink } from "react-router-dom";
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import Breadcrumb from "../../components/breadcrumb/Breadcrumb";
 import { send } from 'emailjs-com';
+import Alert from '@mui/material/Alert';
+import Stack from '@mui/material/Stack';
 
 const Contacts: FC = () => {
     const [userName, setUserName] = useState<string>("")
+    const [userNameError, setUserNameError] = useState<boolean>(false)
     const [message, setMessage] = useState<string>("")
     const [phone, setPhone] = useState<string>("+7")
+    const [phoneError, setPhoneError] = useState<boolean>(false)
+    const [loading, setLoading] = useState(false)
+    const [sendError, setSendError] = useState(false)
+    const [sendSuccess, setSendSuccess] = useState(false)
 
     const onChangePhone = (e: string) => {
         const phoneno = /^\+?([0-9]{2})\)?[-. ]?([0-9]{4})[-. ]?([0-9]{4})$/;
@@ -23,26 +30,56 @@ const Contacts: FC = () => {
         else if (Number(e.substring(1)) || "") {
             setPhone(e)
         }
-
     }
+
 
     const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
-        console.log("submit")
+        if (userName.length <= 1) {
+            setUserNameError(true)
+            setTimeout(() => {
+                setUserNameError(false)
+            }, 3000)
+        }
+        else if (phone.length < 12) {
+            setPhoneError(true)
+            setTimeout(() => {
+                setPhoneError(false)
+            }, 3000)
+        }
+        else {
+            onSend()
+        }
     }
 
-    const onSend = () => {
+    const onSend =  () => {
+        setLoading(true)
+        setSendError(false)
+        setSendSuccess(false)
         send(
             'service_p6ld4zl',
             'template_ffq5i2x',
-            { from_name: "От кого", message: "Текст сообщения", phone: "990" },
+            { from_name: userName, message, phone },
             'kjpQu_9IRGMk0L8Rb'
         )
             .then((response) => {
                 console.log('SUCCESS!', response.status, response.text);
+                setPhone("+7")
+                setMessage("")
+                setUserName("")
+                setLoading(false)
+                setSendSuccess(true)
+                setTimeout(() => {
+                    setSendSuccess(false)
+                }, 3000)
             })
             .catch((err) => {
                 console.log('FAILED...', err);
+                setLoading(false)
+                setSendError(true)
+                setTimeout(() => {
+                    setSendError(false)
+                }, 3000)               
             });
     }
 
@@ -65,7 +102,7 @@ const Contacts: FC = () => {
                             <div className="info-img info-img_mail"><EmailIcon sx={{ color: "#fff" }} /></div>
                             <div className="info__box-details">
                                 <span className="details-title">E-mail</span>
-                                <a className="details-link" href="mailto:test@mail.ru">test@mail.ru</a>
+                                <a className="details-link" href="mailto:stroyka.contact@gmail.com">stroyka.contact@gmail.com</a>
                                 <span className="details-info">Для обращения</span>
                             </div>
                         </div>
@@ -73,14 +110,14 @@ const Contacts: FC = () => {
                     <div className="info__box">
                         <div className="info__box-item">
                             <div className="info-img"><LocalPhoneIcon sx={{ color: "#fff" }} /></div>
-                            <div className="info__box-details">
+                            <div className="info__box-details second-box">
                                 <span className="details-title">Телефон</span>
                                 <a className="details-link" href="tel:+79879876136">+7 (987) 987-61-36</a>
                             </div>
                         </div>
                         <div className="info__box-item">
                             <div className="info-img info-img_time"><AccessTimeIcon sx={{ color: "#fff" }} /></div>
-                            <div className="info__box-details">
+                            <div className="info__box-details second-box">
                                 <span className="details-title">Режим работы</span>
                                 <span className="details-info">Пн. – Пт.: с 9:00 до 18:00</span>
                                 <span className="details-info">
@@ -109,28 +146,39 @@ const Contacts: FC = () => {
                     <div className="form-input">
                         <div className="form__box">
                             <div className="form__box-item">
-                                <span className="form-label">Ваше имя: <span className="required">*</span></span>
-                                <input type="text" onChange={e => setUserName(e.target.value)} />
+                                <div className="form-labels">
+                                    <span className="form-label">Ваше имя: <span className="required">*</span></span>
+                                    <span className={userNameError ? 'error' : "userNameError"}>Заполните это поле! </span>
+                                </div>
+                                <input className={userNameError ? 'error-input' : ""} type="text" onChange={e => setUserName(e.target.value)} value={userName}/>
                             </div>
                             <div className="form__box-item">
                                 <span className="form-label">Сообщение:</span>
-                                <textarea onChange={e => setMessage(e.target.value)}></textarea>
+                                <textarea onChange={e => setMessage(e.target.value)} value={message}></textarea>
                                 <span className="form-label_dop">Описание вашей задачи</span>
                             </div>
 
                         </div>
                         <div className="form__box">
                             <div className="form__box-item">
-                                <span className="form-label">Телефон: <span className="required">*</span></span>
-                                <input type="text" placeholder="+7" maxLength={12} onChange={e => onChangePhone(e.target.value)} value={phone} />
+                                <div className="form-labels">
+                                    <span className="form-label">Телефон: <span className="required">*</span></span>
+                                    <span className={phoneError ? 'error' : "phoneError"}>Заполните это поле! </span>
+                                </div>
+                                <input className={phoneError ? 'error-input' : ""} type="text" placeholder="+7" maxLength={12} onChange={e => onChangePhone(e.target.value)} value={phone} />
                             </div>
                         </div>
                     </div>
 
                     <div className="form-footer">
                         <div className="pull-left"><label className="required">*</label><label> - Обязательные поля</label></div>
-                        <button className="pull-right" type="submit">Отправить</button>
+                        <button disabled={loading} className="pull-right" type="submit">Отправить</button>
                     </div>
+                    <Stack sx={{ width: '100%' }} spacing={2}>
+                        {loading && (<Alert severity="warning">Сообщение отправляется</Alert>)}
+                        {sendError && (<Alert severity="error">Сообщение не отправлено, попробуйте снова</Alert>)}
+                        {sendSuccess && (<Alert severity="success">Сообщение отправлено</Alert>)}                                             
+                    </Stack>
                 </form>
 
             </div>

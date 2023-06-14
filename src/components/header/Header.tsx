@@ -41,14 +41,14 @@ const Header: FC = () => {
                     <button className="header__type-button">САМАРА</button>
                 </div>
                 <div className="header__contacts">
-                    <LocalPhoneIcon sx={{color: "#ff8506"}} />
+                    <LocalPhoneIcon sx={{ color: "#ff8506" }} />
                     <a href="tel:+79879876136">+7 (987) 987-61-36</a>
                 </div>
                 <div className="header__contacts-mob">
                     {/* PHONE */}
                     <Box sx={{ flexGrow: 0 }}>
                         <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                            <LocalPhoneIcon sx={{color: "#ff8506"}}/>
+                            <LocalPhoneIcon sx={{ color: "#ff8506" }} />
                         </IconButton>
                         <Menu
                             sx={{ mt: '45px' }}
@@ -90,7 +90,7 @@ const Header: FC = () => {
                         onClose={toggleDrawer(false)}
                     >
                         <Box>
-                            <IconButton sx={{ mb: 2 }}>
+                            <IconButton sx={{ mb: 2, mt: 2 }}>
                                 <CloseIcon onClick={toggleDrawer(false)} />
                             </IconButton>
                             <Accordion>
@@ -119,42 +119,42 @@ const Header: FC = () => {
                                 </AccordionSummary>
                                 <AccordionDetails>
                                     <Typography sx={{ fontFamily: `'Comfortaa', cursive`, textDecoration: 'none' }}>
-                                        <NavLink className="header__link" to="/stroyka/carwash">Автомойки</NavLink>
+                                        <NavLink onClick={toggleDrawer(false)} className="header__link" to="/stroyka/carwash">Автомойки</NavLink>
                                     </Typography>
                                 </AccordionDetails>
                                 <AccordionDetails>
                                     <Typography sx={{ fontFamily: `'Comfortaa', cursive`, textDecoration: 'none' }}>
-                                        <NavLink className="header__link" to="/stroyka/veranda">Веранды</NavLink>
+                                        <NavLink onClick={toggleDrawer(false)} className="header__link" to="/stroyka/veranda">Веранды</NavLink>
                                     </Typography>
                                 </AccordionDetails>
                                 <AccordionDetails>
                                     <Typography sx={{ fontFamily: `'Comfortaa', cursive`, textDecoration: 'none' }}>
-                                        <NavLink className="header__link" to="/stroyka/garage">Гаражи</NavLink>
+                                        <NavLink onClick={toggleDrawer(false)} className="header__link" to="/stroyka/garage">Гаражи</NavLink>
                                     </Typography>
                                 </AccordionDetails>
                                 <AccordionDetails>
                                     <Typography sx={{ fontFamily: `'Comfortaa', cursive`, textDecoration: 'none' }}>
-                                        <NavLink className="header__link" to="/stroyka/roof">Крыши</NavLink>
+                                        <NavLink onClick={toggleDrawer(false)} className="header__link" to="/stroyka/roof">Крыши</NavLink>
                                     </Typography>
                                 </AccordionDetails>
                                 <AccordionDetails>
                                     <Typography sx={{ fontFamily: `'Comfortaa', cursive`, textDecoration: 'none' }}>
-                                        <NavLink className="header__link" to="/stroyka/mansardy">Мансарды</NavLink>
+                                        <NavLink onClick={toggleDrawer(false)} className="header__link" to="/stroyka/mansardy">Мансарды</NavLink>
                                     </Typography>
                                 </AccordionDetails>
                                 <AccordionDetails>
                                     <Typography sx={{ fontFamily: `'Comfortaa', cursive`, textDecoration: 'none' }}>
-                                        <NavLink className="header__link" to="/stroyka/sooruzhenie">Сооружения</NavLink>
+                                        <NavLink onClick={toggleDrawer(false)} className="header__link" to="/stroyka/sooruzhenie">Сооружения</NavLink>
                                     </Typography>
                                 </AccordionDetails>
                                 <AccordionDetails>
                                     <Typography sx={{ fontFamily: `'Comfortaa', cursive`, textDecoration: 'none' }}>
-                                        <NavLink className="header__link" to="/stroyka/fasad">Фасады</NavLink>
+                                        <NavLink onClick={toggleDrawer(false)} className="header__link" to="/stroyka/fasad">Фасады</NavLink>
                                     </Typography>
                                 </AccordionDetails>
                                 <AccordionDetails>
                                     <Typography sx={{ fontFamily: `'Comfortaa', cursive`, textDecoration: 'none' }}>
-                                        <NavLink className="header__link" to="/stroyka/fundament">Фундамент</NavLink>
+                                        <NavLink onClick={toggleDrawer(false)} className="header__link" to="/stroyka/fundament">Фундамент</NavLink>
                                     </Typography>
                                 </AccordionDetails>
                             </Accordion>
@@ -169,7 +169,7 @@ const Header: FC = () => {
                                 </AccordionSummary>
                                 <AccordionDetails>
                                     <Typography sx={{ fontFamily: `'Comfortaa', cursive`, textDecoration: 'none' }}>
-                                        <NavLink className="header__link" to="/stroyka">Скоро...</NavLink>
+                                        <NavLink onClick={toggleDrawer(false)} className="header__link" to="/stroyka">Скоро...</NavLink>
                                     </Typography>
                                 </AccordionDetails>
                             </Accordion>
@@ -184,7 +184,7 @@ const Header: FC = () => {
                                 </AccordionSummary>
                                 <AccordionDetails>
                                     <Typography sx={{ fontFamily: `'Comfortaa', cursive`, textDecoration: 'none' }}>
-                                        <NavLink className="header__link" to="/stroyka">Скоро...</NavLink>
+                                        <NavLink onClick={toggleDrawer(false)} className="header__link" to="/stroyka">Скоро...</NavLink>
                                     </Typography>
                                 </AccordionDetails>
                             </Accordion>
@@ -199,17 +199,17 @@ const Header: FC = () => {
                                 </AccordionSummary>
                                 <AccordionDetails>
                                     <Typography sx={{ fontFamily: `'Comfortaa', cursive`, textDecoration: 'none' }}>
-                                        <NavLink className="header__link" to="/stroyka">Пристройка к дому</NavLink>
+                                        <NavLink onClick={toggleDrawer(false)} className="header__link" to="/stroyka/services/extension-to-the-house">Пристройка к дому</NavLink>
                                     </Typography>
                                 </AccordionDetails>
                                 <AccordionDetails>
                                     <Typography sx={{ fontFamily: `'Comfortaa', cursive`, textDecoration: 'none' }}>
-                                        <NavLink className="header__link" to="/stroyka">Пристройка гаража</NavLink>
+                                        <NavLink onClick={toggleDrawer(false)} className="header__link" to="/stroyka/services/garage_extension">Пристройка гаража</NavLink>
                                     </Typography>
                                 </AccordionDetails>
                                 <AccordionDetails>
                                     <Typography sx={{ fontFamily: `'Comfortaa', cursive`, textDecoration: 'none' }}>
-                                        <NavLink className="header__link" to="/stroyka">Возведение фундамента</NavLink>
+                                        <NavLink onClick={toggleDrawer(false)} className="header__link" to="/stroyka/services">Возведение фундамента</NavLink>
                                     </Typography>
                                 </AccordionDetails>
                             </Accordion>
@@ -224,62 +224,39 @@ const Header: FC = () => {
                                 </AccordionSummary>
                                 <AccordionDetails>
                                     <Typography sx={{ fontFamily: `'Comfortaa', cursive`, textDecoration: 'none' }}>
-                                        <NavLink className="header__link" to="/stroyka">Ремонт балконных плит</NavLink>
+                                        <NavLink onClick={toggleDrawer(false)} className="header__link" to="/stroyka">Ремонт балконных плит</NavLink>
                                     </Typography>
                                 </AccordionDetails>
                                 <AccordionDetails>
                                     <Typography sx={{ fontFamily: `'Comfortaa', cursive`, textDecoration: 'none' }}>
-                                        <NavLink className="header__link" to="/stroyka">Капитальный ремонт квартир</NavLink>
+                                        <NavLink onClick={toggleDrawer(false)} className="header__link" to="/stroyka">Капитальный ремонт квартир</NavLink>
                                     </Typography>
                                 </AccordionDetails>
                                 <AccordionDetails>
                                     <Typography sx={{ fontFamily: `'Comfortaa', cursive`, textDecoration: 'none' }}>
-                                        <NavLink className="header__link" to="/stroyka">Ремонт зданий</NavLink>
+                                        <NavLink onClick={toggleDrawer(false)} className="header__link" to="/stroyka">Ремонт зданий</NavLink>
                                     </Typography>
                                 </AccordionDetails>
                                 <AccordionDetails>
                                     <Typography sx={{ fontFamily: `'Comfortaa', cursive`, textDecoration: 'none' }}>
-                                        <NavLink className="header__link" to="/stroyka">Ремонт частного дома</NavLink>
+                                        <NavLink onClick={toggleDrawer(false)} className="header__link" to="/stroyka">Ремонт частного дома</NavLink>
                                     </Typography>
                                 </AccordionDetails>
                                 <AccordionDetails>
                                     <Typography sx={{ fontFamily: `'Comfortaa', cursive`, textDecoration: 'none' }}>
-                                        <NavLink className="header__link" to="/stroyka">Ремонт кровли</NavLink>
+                                        <NavLink onClick={toggleDrawer(false)} className="header__link" to="/stroyka">Ремонт кровли</NavLink>
                                     </Typography>
                                 </AccordionDetails>
                             </Accordion>
                             <div className="contacts__mob-link">
                                 <Typography sx={{ fontFamily: `'Comfortaa', cursive`, textDecoration: 'none' }}>
-                                    <NavLink className="header__link" to="/stroyka/contacts">КОНТАКТЫ</NavLink>
+                                    <NavLink onClick={toggleDrawer(false)} className="header__link" to="/stroyka/contacts">КОНТАКТЫ</NavLink>
                                 </Typography>
                             </div>
                         </Box>
                     </Drawer>
                 </div>
             </div>
-            {/* <div className="header__nav">
-                <nav>
-                    <div className="nav-item ">
-                        О КОМПАНИИ
-                    </div>
-                    <div className="nav-item">ПРОЕКТИРОВАНИЕ</div>
-                    <div className="nav-item">ПРОЕКТЫ</div>
-                    <div className="nav-item">УСЛУГИ</div>
-                    <div className="nav-item">РЕМОНТ</div>
-                    <div className="nav-item">КОНТАКТЫ</div>
-                </nav>
-                <div className="navigate__info type-about">
-                    <NavLink className="navigate__type-link" to="/stroyka/carwash">Автомойки</NavLink>
-                    <NavLink className="navigate__type-link" to="/stroyka/veranda">Веранды</NavLink>
-                    <NavLink className="navigate__type-link" to="/stroyka/garage">Гаражи</NavLink>
-                    <NavLink className="navigate__type-link" to="/stroyka/garage">Гаражи</NavLink>
-                    <NavLink className="navigate__type-link" to="/stroyka/roof">Крыши</NavLink>
-                    <NavLink className="navigate__type-link" to="/stroyka/mansardy">Мансарды</NavLink>
-                    <NavLink className="navigate__type-link" to="/stroyka/sooruzhenie">Сооружения</NavLink>
-                    <NavLink className="navigate__type-link" to="/stroyka/fasad">Фасады</NavLink>
-                    <NavLink className="navigate__type-link" to="/stroyka/fundament">Фундамент</NavLink>
-                </div>
-            </div> */}
             <nav className="navbar">
                 <div className="nav-item ">О КОМПАНИИ</div>
                 <div className="dropdown">
@@ -304,8 +281,8 @@ const Header: FC = () => {
                         <i className="fa fa-caret-down"></i>
                     </button>
                     <div className="dropdown-content">
-                        <NavLink className="navigate__type-link" to="/stroyka">Пристройка к дому</NavLink>
-                        <NavLink className="navigate__type-link" to="/stroyka">Капитальный ремонт квартир</NavLink>
+                        <NavLink className="navigate__type-link" to="/stroyka/services/extension-to-the-house">Пристройка к дому</NavLink>
+                        <NavLink className="navigate__type-link" to="/stroyka/services/garage_extension">Пристройка гаража</NavLink>
                         <NavLink className="navigate__type-link" to="/stroyka">Возведение фундамента</NavLink>
                     </div>
                 </div>

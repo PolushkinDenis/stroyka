@@ -12,6 +12,9 @@ import Fasad from './pages/disign/fasad/Fasad';
 import Fundament from './pages/disign/fundament/Fundament';
 import Footer from './components/footer/Footer';
 import Contacts from './pages/contacts/Contacts';
+import ExtensionToTheHouse from './pages/service/extensionToTheHouse/ExtensionToTheHouse';
+import GarageExtension from './pages/service/garageExtension/GarageExtension';
+import ServicesPage from './pages/service/servicesPage/ServicesPage';
 
 const App = () => {
   return (
@@ -29,7 +32,11 @@ const App = () => {
             <Route path="/stroyka/fasad" element={<Fasad />} />
             <Route path="/stroyka/fundament" element={<Fundament />} />
             <Route path="/stroyka/contacts" element={<Contacts />} />
+            <Route path="/stroyka/services" element={<ServicesPage />} />
+            <Route path="/stroyka/services/extension-to-the-house" element={<ExtensionToTheHouse />} />
+            <Route path="/stroyka/services/garage_extension" element={<GarageExtension />} />
 
+            
           </>
       </Routes>
       <Footer />

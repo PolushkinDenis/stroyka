@@ -1,0 +1,41 @@
+.serviceItem {
+    display: flex;
+    align-items: center;
+    img {
+        max-width: 260px;
+        height: 200px;
+    }
+    .serviceItem__contetnt {
+        display: flex;
+        flex-direction: column;
+        margin-left: 2%;
+        .serviceItem__contetnt-link {
+            text-decoration: none;
+            color: #ff8506;
+            font-weight: 600;
+            margin-bottom: 3%;
+        }
+        .serviceItem__contetnt_description {
+            font-size: 14px;
+            margin-bottom: 3%;
+        }
+        .serviceItem__contetnt-btn {
+            border: 1px solid #ff8506;
+            color: #ff8506;
+            max-width: 100px;
+            border-width: 2px;
+            letter-spacing: 0.03em;
+            border-radius: 3px; 
+            background: none;
+            font-size: 12px;
+            padding: 10px 5px;
+            text-decoration: none;
+            margin-top: 10px;
+            text-align: center;
+            &:hover {
+                background-color: #ff8506;
+                color: #fff;
+            }             
+        }
+    }
+}
