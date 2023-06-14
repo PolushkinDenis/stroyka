@@ -1,6 +1,7 @@
 import React, { FC } from 'react'
 import Breadcrumb from '../breadcrumb/Breadcrumb'
 import './Services.scss'
+import OrderService from '../orderService/OrderService'
 
 interface ServicesProps {
     title: string,
@@ -27,6 +28,7 @@ const Services: FC<ServicesProps> = ({ children, image, title, info }) => {
                 <div className='services__container'>
                     {children}
                 </div>
+                <OrderService />
             </main>
 
         </>

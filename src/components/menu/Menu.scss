@@ -18,5 +18,7 @@
             border-bottom: 1px solid #ebeef1; 
         }
     }
-    
+    @media (max-width: 800px) {
+        display: none;
+    }  
 }

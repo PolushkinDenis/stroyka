@@ -9,10 +9,24 @@
     hr {
         margin: 20px 0;
     }
-    .services-phone {
-        text-decoration: none;
-        font-weight: 600;
-        color: #ff8506;
+    .services__contacts {
+        display: flex;
+        flex-direction: column;
+        .services__contacts-phone {
+            margin-top: 3%;
+            text-decoration: none;
+            font-weight: 600;
+            color: #ff8506;
+        }
     }
+  
     margin-bottom: 20px;
+}
+@media (max-width: 800px) {
+    .servicesPage {
+        flex-direction: column;
+        section {
+            width: 100%;
+        }
+    } 
 }

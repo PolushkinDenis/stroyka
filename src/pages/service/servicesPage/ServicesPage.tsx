@@ -8,6 +8,7 @@ import ServiceItem from '../../../components/serviceItem/ServiceItem'
 import { IServiceItem } from '../../../types/IServiceItem'
 import Menu from '../../../components/menu/Menu'
 import { IMenu } from '../../../types/IMenu'
+import foundation from '../../../images/service/foundation.jpg'
 
 const servicesList: IServiceItem[] = [
     {
@@ -21,14 +22,20 @@ const servicesList: IServiceItem[] = [
         href: "garage_extension",
         image: garage_extension,
         title: "Пристройка гаража"
+    },
+    {
+        description: "Компания «Кирстрой» в Самаре осуществляет строительство ленточного фундамента различного типа. Данный фундамент является одним из самых распространенных, поскольку отличается впечатляющими характеристиками. Представители компании выделяют его прочность и значительную несущую способность.",
+        href: "foundation",
+        image: foundation,
+        title: "Возведение фундамента"
     }
 ]
 
 
 const servicesMenu: IMenu[] = [
-    {title: "Пристройка к дому", href: "extension-to-the-house"},
-    {title: "Пристройка гаража", href: "garage_extension"},
-    {title: "Возведение фундамента", href: "garage_extension"},
+    { title: "Пристройка к дому", href: "extension-to-the-house" },
+    { title: "Пристройка гаража", href: "garage_extension" },
+    { title: "Возведение фундамента", href: "foundation" },
 
 ]
 
@@ -38,7 +45,7 @@ const ServicesPage: FC = () => {
         <>
             <Breadcrumb title="Услуги в Самаре и области" />
             <main className='servicesPage'>
-               <Menu list={servicesMenu}/>
+                <Menu list={servicesMenu} />
                 <section>
                     {servicesList.map(service => (
                         <>
@@ -48,15 +55,12 @@ const ServicesPage: FC = () => {
                     ))}
                     <div>
                         <h2>Прайс компании</h2>
-                        <div>
+                        <div className='services__contacts'>
                             <span>Для уточнения стоимости работ обратитесь по телефону: </span>
-                            <a className='services-phone' href="tel:+79879876136">+7 (987) 987-61-36</a>
+                            <a className='services__contacts-phone' href="tel:+79879876136">+7 (987) 987-61-36</a>
                         </div>
                     </div>
                 </section>
-
-
-
             </main>
         </>
 

@@ -209,7 +209,7 @@ const Header: FC = () => {
                                 </AccordionDetails>
                                 <AccordionDetails>
                                     <Typography sx={{ fontFamily: `'Comfortaa', cursive`, textDecoration: 'none' }}>
-                                        <NavLink onClick={toggleDrawer(false)} className="header__link" to="/stroyka/services">Возведение фундамента</NavLink>
+                                        <NavLink onClick={toggleDrawer(false)} className="header__link" to="/stroyka/services/foundation">Возведение фундамента</NavLink>
                                     </Typography>
                                 </AccordionDetails>
                             </Accordion>
@@ -283,7 +283,7 @@ const Header: FC = () => {
                     <div className="dropdown-content">
                         <NavLink className="navigate__type-link" to="/stroyka/services/extension-to-the-house">Пристройка к дому</NavLink>
                         <NavLink className="navigate__type-link" to="/stroyka/services/garage_extension">Пристройка гаража</NavLink>
-                        <NavLink className="navigate__type-link" to="/stroyka">Возведение фундамента</NavLink>
+                        <NavLink className="navigate__type-link" to="/stroyka/services/foundation">Возведение фундамента</NavLink>
                     </div>
                 </div>
                 <div className="dropdown">
