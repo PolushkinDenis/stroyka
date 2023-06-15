@@ -13,9 +13,10 @@
     justify-content: space-around;
     align-items: center;
     padding: 10px 20px;
+    text-align: center;
     .order__content-btn {
         cursor: pointer;
-        min-width: 140px;
+        min-width: 155px;
         height: 40px;
         background-color: #ff8506;
         border-color: #ff8506;
@@ -24,6 +25,7 @@
         border: none;
         padding: 10px 15px;
         margin-right: 10px;
+        line-height: 1;
         &:hover {
             background-color: #ffab50;
         }
@@ -32,8 +34,8 @@
         flex-direction: column;
         height: 100px;
         padding: 20px;
-        .order__content-btn { 
-            margin-bottom: 30px;
+        .order__content-text { 
+            margin-top: 30px;
         }
     }
 }

@@ -47,6 +47,9 @@ footer {
                 &:first-child {
                     margin-right: 10%;
                 }
+                @media (max-width: 450px) {
+                    margin-top: 10px;
+                }
             }
         }
         .footer__contact {

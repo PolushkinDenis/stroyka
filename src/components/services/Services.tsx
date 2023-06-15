@@ -20,15 +20,19 @@ const Services: FC<ServicesProps> = ({ children, image, title, info }) => {
                     <img className='services__img' src={image} />
                     <div className='services__container-box'>
                         {info}
-                        <div className='services__question'>
-                            <button>Задать вопрос</button>
-                        </div>
+                        {/* <div className='services__question'> */}
+                            {/* <button>Задать вопрос</button> */}
+                            <OrderService title="Задать вопрос"/>
+
+                        {/* </div> */}
                     </div>
                 </div>
                 <div className='services__container'>
                     {children}
                 </div>
-                <OrderService />
+                <hr className='order-hr-top' />
+                <OrderService title="Заказать услугу" info="Оформите заявку на сайте. Наш менеджер свяжется с вами для уточнения деталей."/>
+                <hr className='order-hr-botton' />
             </main>
 
         </>
