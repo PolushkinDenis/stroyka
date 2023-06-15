@@ -119,42 +119,42 @@ const Header: FC = () => {
                                 </AccordionSummary>
                                 <AccordionDetails>
                                     <Typography sx={{ fontFamily: `'Comfortaa', cursive`, textDecoration: 'none' }}>
-                                        <NavLink onClick={toggleDrawer(false)} className="header__link" to="/stroyka/carwash">Автомойки</NavLink>
+                                        <NavLink onClick={toggleDrawer(false)} className="header__link" to="/stroyka/designing/carwash">Автомойки</NavLink>
                                     </Typography>
                                 </AccordionDetails>
                                 <AccordionDetails>
                                     <Typography sx={{ fontFamily: `'Comfortaa', cursive`, textDecoration: 'none' }}>
-                                        <NavLink onClick={toggleDrawer(false)} className="header__link" to="/stroyka/veranda">Веранды</NavLink>
+                                        <NavLink onClick={toggleDrawer(false)} className="header__link" to="/stroyka/designing/veranda">Веранды</NavLink>
                                     </Typography>
                                 </AccordionDetails>
                                 <AccordionDetails>
                                     <Typography sx={{ fontFamily: `'Comfortaa', cursive`, textDecoration: 'none' }}>
-                                        <NavLink onClick={toggleDrawer(false)} className="header__link" to="/stroyka/garage">Гаражи</NavLink>
+                                        <NavLink onClick={toggleDrawer(false)} className="header__link" to="/stroyka/designing/garage">Гаражи</NavLink>
                                     </Typography>
                                 </AccordionDetails>
                                 <AccordionDetails>
                                     <Typography sx={{ fontFamily: `'Comfortaa', cursive`, textDecoration: 'none' }}>
-                                        <NavLink onClick={toggleDrawer(false)} className="header__link" to="/stroyka/roof">Крыши</NavLink>
+                                        <NavLink onClick={toggleDrawer(false)} className="header__link" to="/stroyka/designing/roof">Крыши</NavLink>
                                     </Typography>
                                 </AccordionDetails>
                                 <AccordionDetails>
                                     <Typography sx={{ fontFamily: `'Comfortaa', cursive`, textDecoration: 'none' }}>
-                                        <NavLink onClick={toggleDrawer(false)} className="header__link" to="/stroyka/mansardy">Мансарды</NavLink>
+                                        <NavLink onClick={toggleDrawer(false)} className="header__link" to="/stroyka/designing/mansardy">Мансарды</NavLink>
                                     </Typography>
                                 </AccordionDetails>
                                 <AccordionDetails>
                                     <Typography sx={{ fontFamily: `'Comfortaa', cursive`, textDecoration: 'none' }}>
-                                        <NavLink onClick={toggleDrawer(false)} className="header__link" to="/stroyka/sooruzhenie">Сооружения</NavLink>
+                                        <NavLink onClick={toggleDrawer(false)} className="header__link" to="/stroyka/designing/sooruzhenie">Сооружения</NavLink>
                                     </Typography>
                                 </AccordionDetails>
                                 <AccordionDetails>
                                     <Typography sx={{ fontFamily: `'Comfortaa', cursive`, textDecoration: 'none' }}>
-                                        <NavLink onClick={toggleDrawer(false)} className="header__link" to="/stroyka/fasad">Фасады</NavLink>
+                                        <NavLink onClick={toggleDrawer(false)} className="header__link" to="/stroyka/designing/fasad">Фасады</NavLink>
                                     </Typography>
                                 </AccordionDetails>
                                 <AccordionDetails>
                                     <Typography sx={{ fontFamily: `'Comfortaa', cursive`, textDecoration: 'none' }}>
-                                        <NavLink onClick={toggleDrawer(false)} className="header__link" to="/stroyka/fundament">Фундамент</NavLink>
+                                        <NavLink onClick={toggleDrawer(false)} className="header__link" to="/stroyka/designing/fundament">Фундамент</NavLink>
                                     </Typography>
                                 </AccordionDetails>
                             </Accordion>
@@ -264,15 +264,19 @@ const Header: FC = () => {
                         <i className="fa fa-caret-down"></i>
                     </button>
                     <div className="dropdown-content">
-                        <NavLink className="navigate__type-link" to="/stroyka/carwash">Автомойки</NavLink>
-                        <NavLink className="navigate__type-link" to="/stroyka/veranda">Веранды</NavLink>
-                        <NavLink className="navigate__type-link" to="/stroyka/garage">Гаражи</NavLink>
-                        <NavLink className="navigate__type-link" to="/stroyka/garage">Гаражи</NavLink>
-                        <NavLink className="navigate__type-link" to="/stroyka/roof">Крыши</NavLink>
-                        <NavLink className="navigate__type-link" to="/stroyka/mansardy">Мансарды</NavLink>
-                        <NavLink className="navigate__type-link" to="/stroyka/sooruzhenie">Сооружения</NavLink>
-                        <NavLink className="navigate__type-link" to="/stroyka/fasad">Фасады</NavLink>
-                        <NavLink className="navigate__type-link" to="/stroyka/fundament">Фундамент</NavLink>
+                    <div className="dropdown-content-mainLink"> 
+                            <NavLink className="navigate__type-mainLink" to="/stroyka/designing">Проектирование</NavLink>
+                            <div className="vl"></div>
+                        </div>
+                        <NavLink className="navigate__type-link" to="/stroyka/designing/carwash">Автомойки</NavLink>
+                        <NavLink className="navigate__type-link" to="/stroyka/designing/veranda">Веранды</NavLink>
+                        <NavLink className="navigate__type-link" to="/stroyka/designing/garage">Гаражи</NavLink>
+                        <NavLink className="navigate__type-link" to="/stroyka/designing/garage">Гаражи</NavLink>
+                        <NavLink className="navigate__type-link" to="/stroyka/designing/roof">Крыши</NavLink>
+                        <NavLink className="navigate__type-link" to="/stroyka/designing/mansardy">Мансарды</NavLink>
+                        <NavLink className="navigate__type-link" to="/stroyka/designing/sooruzhenie">Сооружения</NavLink>
+                        <NavLink className="navigate__type-link" to="/stroyka/designing/fasad">Фасады</NavLink>
+                        <NavLink className="navigate__type-link" to="/stroyka/designing/fundament">Фундамент</NavLink>
                     </div>
                 </div>
                 <div className="nav-item">ПРОЕКТЫ</div>
@@ -281,6 +285,10 @@ const Header: FC = () => {
                         <i className="fa fa-caret-down"></i>
                     </button>
                     <div className="dropdown-content">
+                        <div className="dropdown-content-mainLink"> 
+                            <NavLink className="navigate__type-mainLink" to="/stroyka/services">Услуги</NavLink>
+                            <div className="vl"></div>
+                        </div>
                         <NavLink className="navigate__type-link" to="/stroyka/services/extension-to-the-house">Пристройка к дому</NavLink>
                         <NavLink className="navigate__type-link" to="/stroyka/services/garage_extension">Пристройка гаража</NavLink>
                         <NavLink className="navigate__type-link" to="/stroyka/services/foundation">Возведение фундамента</NavLink>

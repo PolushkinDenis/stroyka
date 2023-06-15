@@ -1,7 +1,6 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 import './ServicesPage.scss'
 import Breadcrumb from '../../../components/breadcrumb/Breadcrumb'
-import { NavLink } from 'react-router-dom'
 import extensionToTheHouse from '../../../images/service/extensionToTheHouse.jpg'
 import garage_extension from '../../../images/service/garage_extension.jpg'
 import ServiceItem from '../../../components/serviceItem/ServiceItem'
@@ -24,7 +23,7 @@ const servicesList: IServiceItem[] = [
         title: "Пристройка гаража"
     },
     {
-        description: "Компания «Кирстрой» в Самаре осуществляет строительство ленточного фундамента различного типа. Данный фундамент является одним из самых распространенных, поскольку отличается впечатляющими характеристиками. Представители компании выделяют его прочность и значительную несущую способность.",
+        description: "Наша компания в Самаре осуществляет строительство ленточного фундамента различного типа. Данный фундамент является одним из самых распространенных, поскольку отличается впечатляющими характеристиками. Представители компании выделяют его прочность и значительную несущую способность.",
         href: "foundation",
         image: foundation,
         title: "Возведение фундамента"
@@ -36,11 +35,9 @@ const servicesMenu: IMenu[] = [
     { title: "Пристройка к дому", href: "extension-to-the-house" },
     { title: "Пристройка гаража", href: "garage_extension" },
     { title: "Возведение фундамента", href: "foundation" },
-
 ]
 
 const ServicesPage: FC = () => {
-
     return (
         <>
             <Breadcrumb title="Услуги в Самаре и области" />
@@ -63,7 +60,6 @@ const ServicesPage: FC = () => {
                 </section>
             </main>
         </>
-
     )
 }
 

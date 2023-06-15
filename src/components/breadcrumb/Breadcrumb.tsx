@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from 'react'
+import { FC, useEffect, useState } from 'react'
 import './Breadcrumb.scss'
 import { NavLink, useLocation } from 'react-router-dom'
 
@@ -13,25 +13,24 @@ interface BreadcrumbProps {
 
 const Breadcrumb: FC<BreadcrumbProps> = ({ title }) => {
     const [breadcrumbs, setBreadcrumbs] = useState<IBreadcrumbs[]>([])
-    const [links, setLinks] = useState<string[]>([])
     const location = useLocation()
 
     const linkUrl: IBreadcrumbs[] = [
         { name: "Главная", value: "stroyka" },
+        { name: "Проектирование", value: "designing" },
         { name: "Контакты", value: "contacts" },
         { name: "Автомойки", value: "carwash" },
         { name: "Веранды", value: "veranda" },
-        { name: "Гаража", value: "garage" },
+        { name: "Гаражы", value: "garage" },
         { name: "Крыши", value: "roof" },
         { name: "Мансарды", value: "mansardy" },
         { name: "Сооружения", value: "sooruzhenie" },
         { name: "Фасад", value: "fasad" },
-        { name: "Фундамента", value: "fundament" },
+        { name: "Фундамент", value: "fundament" },
         {name: "Пристройка к дому", value: "extension-to-the-house"},
         {name: "Пристройка гаража", value: "garage_extension"},
         {name: "Услуги", value: "services"},
-        {name: "Ленточный фундамент", value: "foundation"}
-        
+        {name: "Ленточный фундамент", value: "foundation"}   
     ]
 
     const createBreadcrumbs = () => {
@@ -68,8 +67,6 @@ const Breadcrumb: FC<BreadcrumbProps> = ({ title }) => {
     useEffect(() => {
         createBreadcrumbs()
     }, [])
-
-    console.log(breadcrumbs)
 
     return (
         <section className='breadcrumbs'>

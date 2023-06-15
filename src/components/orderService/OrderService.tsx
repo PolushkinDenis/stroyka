@@ -10,13 +10,16 @@ import DialogTitle from '@mui/material/DialogTitle';
 import Alert from '@mui/material/Alert';
 import Stack from '@mui/material/Stack';
 import { send } from 'emailjs-com';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 interface OrderServiceProps {
+    header?: string,
     title: string,
     info?: string
+    arrow?: boolean
 }
 
-const OrderService: FC<OrderServiceProps> = ({ title, info }) => {
+const OrderService: FC<OrderServiceProps> = ({ title, info, arrow, header }) => {
     const [userName, setUserName] = useState<string>("")
     const [userNameError, setUserNameError] = useState<boolean>(false)
     const [message, setMessage] = useState<string>("")
@@ -100,79 +103,84 @@ const OrderService: FC<OrderServiceProps> = ({ title, info }) => {
 
     return (
         <>
-<div>
-            <section className='order__content'>
-                <div>
-                    <Button className='order__content-btn' onClick={handleClickOpen}>
-                        {title}
-                    </Button>
-                    <Dialog open={open} onClose={handleClose}>
-                        <DialogTitle sx={{ backgroundColor: "#ff8506", color: "#fff" }}>{title}</DialogTitle>
-                        <form onSubmit={e => onSubmit(e)}>
-                            <DialogContent>
-                                <DialogContentText sx={{ mt: 2, mb: 2 }}>
-                                    Менеджеры компании с радостью ответят на ваши вопросы и произведут
-                                    расчет стоимости услуг и подготовят индивидуальное коммерческое предложение.
-                                </DialogContentText>
+            <div>
+                <section className='order__content'>
+                    <div>
+                        <Button className='order__content-btn' onClick={handleClickOpen}>
+                            {title}
+                        </Button>
+                        <Dialog open={open} onClose={handleClose}>
+                            <DialogTitle sx={{ backgroundColor: "#ff8506", color: "#fff" }}>{title}</DialogTitle>
+                            <form onSubmit={e => onSubmit(e)}>
+                                <DialogContent>
+                                    <DialogContentText sx={{ mt: 2, mb: 2 }}>
+                                        Менеджеры компании с радостью ответят на ваши вопросы и произведут
+                                        расчет стоимости услуг и подготовят индивидуальное коммерческое предложение.
+                                    </DialogContentText>
 
-                                <TextField
-                                    error={userNameError}
-                                    autoFocus
-                                    margin="dense"
-                                    id="userName"
-                                    label="Ваше имя"
-                                    type="text"
-                                    fullWidth
-                                    variant="outlined"
-                                    color="warning"
-                                    value={userName}
-                                    helperText="Введите ваше имя"
-                                    onChange={e => setUserName(e.target.value)}
-                                />
-                                <TextField
-                                    error={phoneError}
-                                    margin="dense"
-                                    id="phone"
-                                    label="Телефон"
-                                    type="phone"
-                                    fullWidth
-                                    variant="outlined"
-                                    color="warning"
-                                    value={phone}
-                                    helperText="Введите ваш телефон"
-                                    inputProps={{ maxLength: 12 }}
-                                    onChange={e => onChangePhone(e.target.value)}
-                                />
-                                <TextField
-                                    margin="dense"
-                                    id="message"
-                                    label="Сообщение:"
-                                    type="text"
-                                    fullWidth
-                                    multiline
-                                    rows={4}
-                                    color="warning"
-                                    value={message}
-                                    onChange={e => setMessage(e.target.value)}
-                                />
-                            </DialogContent>
-                            <DialogActions>
-                                <Button variant="outlined" color="warning" onClick={handleClose}>Отмена</Button>
-                                <Button type="submit" variant="outlined" color="warning" >Отправить</Button>
-                            </DialogActions>
-                        </form>
-                    </Dialog>
-                </div>
-                {info && (
-                    <span className='order__content-text'>Оформите заявку на сайте. Наш менеджер свяжется с вами для уточнения деталей. </span>
-                )}
-
-            </section>
-            <Stack sx={{ width: '100%' }} spacing={2}>
-                {loading && (<Alert severity="warning">Сообщение отправляется</Alert>)}
-                {sendError && (<Alert severity="error">Сообщение не отправлено, попробуйте снова</Alert>)}
-                {sendSuccess && (<Alert severity="success">Сообщение отправлено</Alert>)}
-            </Stack>
+                                    <TextField
+                                        error={userNameError}
+                                        autoFocus
+                                        margin="dense"
+                                        id="userName"
+                                        label="Ваше имя"
+                                        type="text"
+                                        fullWidth
+                                        variant="outlined"
+                                        color="warning"
+                                        value={userName}
+                                        helperText={userNameError && "Введите ваше имя"}
+                                        onChange={e => setUserName(e.target.value)}
+                                    />
+                                    <TextField
+                                        error={phoneError}
+                                        margin="dense"
+                                        id="phone"
+                                        label="Телефон"
+                                        type="phone"
+                                        fullWidth
+                                        variant="outlined"
+                                        color="warning"
+                                        value={phone}
+                                        helperText={phoneError && "Введите ваш телефон"}
+                                        inputProps={{ maxLength: 12 }}
+                                        onChange={e => onChangePhone(e.target.value)}
+                                    />
+                                    <TextField
+                                        margin="dense"
+                                        id="message"
+                                        label="Сообщение:"
+                                        type="text"
+                                        fullWidth
+                                        multiline
+                                        rows={4}
+                                        color="warning"
+                                        value={message}
+                                        onChange={e => setMessage(e.target.value)}
+                                    />
+                                </DialogContent>
+                                <DialogActions>
+                                    <Button variant="outlined" color="warning" onClick={handleClose}>Отмена</Button>
+                                    <Button type="submit" variant="outlined" color="warning" >Отправить</Button>
+                                </DialogActions>
+                            </form>
+                        </Dialog>
+                    </div>
+                    {info && (
+                        <span className='order__content-text'>{info}</span>
+                    )}
+                    {arrow && (
+                        <ArrowForwardIosIcon className='order-arrow' sx={{width: "3em", height: "3em", fontSize: "large", color: "#ffab50"}}/>
+                    )}
+                     {header && (
+                        <h2>{header}</h2>
+                    )}
+                </section>
+                <Stack sx={{ width: '100%' }} spacing={2}>
+                    {loading && (<Alert severity="warning">Сообщение отправляется</Alert>)}
+                    {sendError && (<Alert severity="error">Сообщение не отправлено, попробуйте снова</Alert>)}
+                    {sendSuccess && (<Alert severity="success">Сообщение отправлено</Alert>)}
+                </Stack>
             </div>
         </>
     )

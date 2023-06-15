@@ -232,6 +232,27 @@ header {
     margin-left: auto;
     margin-right: auto;
     padding: 20px 5px;
+    .dropdown-content-mainLink {
+        display: flex;
+        .navigate__type-mainLink {
+            // padding: 10px;
+            background-color: #ff8506;
+            border: 1px solid #ff8506;
+            font-size: 20px;
+            text-decoration: none;
+            color: #fff;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            &:hover {
+                background-color: #ffab50;
+            }
+        }
+        .vl {
+            border-left: 3px solid #ff8506;
+            height: calc(100% - 10px);
+            margin-right: 10px;
+        }
+    }
 }
 
 .dropdown-content a {

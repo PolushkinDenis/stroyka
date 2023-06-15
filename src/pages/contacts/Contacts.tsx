@@ -22,8 +22,6 @@ const Contacts: FC = () => {
     const [sendSuccess, setSendSuccess] = useState(false)
 
     const onChangePhone = (e: string) => {
-        const phoneno = /^\+?([0-9]{2})\)?[-. ]?([0-9]{4})[-. ]?([0-9]{4})$/;
-        console.log(e)
         if (e.length === 1 && Number(e)) {
             setPhone("+7" + e)
         }
@@ -31,7 +29,6 @@ const Contacts: FC = () => {
             setPhone(e)
         }
     }
-
 
     const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
@@ -63,7 +60,6 @@ const Contacts: FC = () => {
             'kjpQu_9IRGMk0L8Rb'
         )
             .then((response) => {
-                console.log('SUCCESS!', response.status, response.text);
                 setPhone("+7")
                 setMessage("")
                 setUserName("")
@@ -74,7 +70,6 @@ const Contacts: FC = () => {
                 }, 3000)
             })
             .catch((err) => {
-                console.log('FAILED...', err);
                 setLoading(false)
                 setSendError(true)
                 setTimeout(() => {
@@ -85,7 +80,6 @@ const Contacts: FC = () => {
 
     return (
         <main className="contacts">
-            {/* <section>Контакты в Самаре и области</section> */}
             <Breadcrumb title="Контакты в Самаре и области" />
             <div className="contacts__info">
                 <div className="info-city">Самара</div>
@@ -169,7 +163,6 @@ const Contacts: FC = () => {
                             </div>
                         </div>
                     </div>
-
                     <div className="form-footer">
                         <div className="pull-left"><label className="required">*</label><label> - Обязательные поля</label></div>
                         <button disabled={loading} className="pull-right" type="submit">Отправить</button>
@@ -180,9 +173,7 @@ const Contacts: FC = () => {
                         {sendSuccess && (<Alert severity="success">Сообщение отправлено</Alert>)}                                             
                     </Stack>
                 </form>
-
             </div>
-
         </main>
     )
 }

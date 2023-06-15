@@ -11,7 +11,6 @@ interface ServicesProps {
 }
 
 const Services: FC<ServicesProps> = ({ children, image, title, info }) => {
-
     return (
         <>
             <Breadcrumb title={title} />
@@ -20,11 +19,7 @@ const Services: FC<ServicesProps> = ({ children, image, title, info }) => {
                     <img className='services__img' src={image} />
                     <div className='services__container-box'>
                         {info}
-                        {/* <div className='services__question'> */}
-                            {/* <button>Задать вопрос</button> */}
                             <OrderService title="Задать вопрос"/>
-
-                        {/* </div> */}
                     </div>
                 </div>
                 <div className='services__container'>
@@ -34,7 +29,6 @@ const Services: FC<ServicesProps> = ({ children, image, title, info }) => {
                 <OrderService title="Заказать услугу" info="Оформите заявку на сайте. Наш менеджер свяжется с вами для уточнения деталей."/>
                 <hr className='order-hr-botton' />
             </main>
-
         </>
     )
 }

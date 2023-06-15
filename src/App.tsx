@@ -16,6 +16,7 @@ import ExtensionToTheHouse from './pages/service/extensionToTheHouse/ExtensionTo
 import GarageExtension from './pages/service/garageExtension/GarageExtension';
 import ServicesPage from './pages/service/servicesPage/ServicesPage';
 import Foundation from './pages/service/foundation/Foundation';
+import DisignPage from './pages/disign/disignPage/DisignPage';
 
 const App = () => {
   return (
@@ -24,14 +25,15 @@ const App = () => {
       <Routes>
           <>
             <Route path="/stroyka" element={<Main />} />
-            <Route path="/stroyka/carwash" element={<CarWash />} />
-            <Route path="/stroyka/veranda" element={<Veranda />} />
-            <Route path="/stroyka/garage" element={<Garage />} />
-            <Route path="/stroyka/roof" element={<Roof />} />
-            <Route path="/stroyka/mansardy" element={<Mansardy />} />
-            <Route path="/stroyka/sooruzhenie" element={<Structure />} />
-            <Route path="/stroyka/fasad" element={<Fasad />} />
-            <Route path="/stroyka/fundament" element={<Fundament />} />
+            <Route path="/stroyka/designing" element={<DisignPage />} />
+            <Route path="/stroyka/designing/carwash" element={<CarWash />} />
+            <Route path="/stroyka/designing/veranda" element={<Veranda />} />
+            <Route path="/stroyka/designing/garage" element={<Garage />} />
+            <Route path="/stroyka/designing/roof" element={<Roof />} />
+            <Route path="/stroyka/designing/mansardy" element={<Mansardy />} />
+            <Route path="/stroyka/designing/sooruzhenie" element={<Structure />} />
+            <Route path="/stroyka/designing/fasad" element={<Fasad />} />
+            <Route path="/stroyka/designing/fundament" element={<Fundament />} />
             <Route path="/stroyka/contacts" element={<Contacts />} />
             <Route path="/stroyka/services" element={<ServicesPage />} />
             <Route path="/stroyka/services/extension-to-the-house" element={<ExtensionToTheHouse />} />

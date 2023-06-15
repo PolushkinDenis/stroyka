@@ -8,12 +8,15 @@ interface MenuProps {
     list: IMenu[]
 }
 
-const Menu: FC<MenuProps> = ({list}) => {
+const Menu: FC<MenuProps> = ({ list }) => {
     return (
         <aside className='menu'>
             {list.map(link => (
-                <NavLink className="menu-link" to={link.href}>{link.title} <ArrowForwardIosIcon sx={{fontSize: "small"}}/></NavLink>
+                <NavLink className="menu-link" to={link.href}>{link.title} <ArrowForwardIosIcon sx={{ fontSize: "small" }} /></NavLink>
             ))}
+            <div className='menu-info'> 
+                Мы строим то, что вам нравится.
+            </div>
         </aside>
     )
 }
