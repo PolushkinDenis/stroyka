@@ -271,7 +271,6 @@ const Header: FC = () => {
                         <NavLink className="navigate__type-link" to="/stroyka/designing/carwash">Автомойки</NavLink>
                         <NavLink className="navigate__type-link" to="/stroyka/designing/veranda">Веранды</NavLink>
                         <NavLink className="navigate__type-link" to="/stroyka/designing/garage">Гаражи</NavLink>
-                        <NavLink className="navigate__type-link" to="/stroyka/designing/garage">Гаражи</NavLink>
                         <NavLink className="navigate__type-link" to="/stroyka/designing/roof">Крыши</NavLink>
                         <NavLink className="navigate__type-link" to="/stroyka/designing/mansardy">Мансарды</NavLink>
                         <NavLink className="navigate__type-link" to="/stroyka/designing/sooruzhenie">Сооружения</NavLink>

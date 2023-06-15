@@ -17,6 +17,7 @@ import GarageExtension from './pages/service/garageExtension/GarageExtension';
 import ServicesPage from './pages/service/servicesPage/ServicesPage';
 import Foundation from './pages/service/foundation/Foundation';
 import DisignPage from './pages/disign/disignPage/DisignPage';
+import AboutUs from './pages/uboutUs/AboutUs';
 
 const App = () => {
   return (
@@ -34,7 +35,11 @@ const App = () => {
             <Route path="/stroyka/designing/sooruzhenie" element={<Structure />} />
             <Route path="/stroyka/designing/fasad" element={<Fasad />} />
             <Route path="/stroyka/designing/fundament" element={<Fundament />} />
+
             <Route path="/stroyka/contacts" element={<Contacts />} />
+            
+            <Route path="/stroyka/about" element={<AboutUs />} />
+
             <Route path="/stroyka/services" element={<ServicesPage />} />
             <Route path="/stroyka/services/extension-to-the-house" element={<ExtensionToTheHouse />} />
             <Route path="/stroyka/services/garage_extension" element={<GarageExtension />} />

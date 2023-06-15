@@ -30,7 +30,9 @@ const Breadcrumb: FC<BreadcrumbProps> = ({ title }) => {
         {name: "Пристройка к дому", value: "extension-to-the-house"},
         {name: "Пристройка гаража", value: "garage_extension"},
         {name: "Услуги", value: "services"},
-        {name: "Ленточный фундамент", value: "foundation"}   
+        {name: "Ленточный фундамент", value: "foundation"},
+        {name: "О компании", value: "about"},
+  
     ]
 
     const createBreadcrumbs = () => {

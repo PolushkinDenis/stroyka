@@ -131,7 +131,7 @@ const Contacts: FC = () => {
                     почты (Email).
                 </p>
                 <p>Также доступны мессенджеры: WhatsApp</p>
-                <NavLink className="link-company" to="/stroyka/company" >Больше информации о нас <ArrowForwardIosIcon fontSize="small" sx={{ color: "#ff8506" }} /></NavLink>
+                <NavLink className="link-company" to="/stroyka/about" >Больше информации о нас <ArrowForwardIosIcon fontSize="small" sx={{ color: "#ff8506" }} /></NavLink>
             </div>
             <hr></hr>
             <div className="form">
