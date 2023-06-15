@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/stroyka/static/css/main.d6b6c070.css",
-    "main.js": "/stroyka/static/js/main.e0299134.js",
+    "main.css": "/stroyka/static/css/main.e617f64d.css",
+    "main.js": "/stroyka/static/js/main.5c663530.js",
     "static/media/3-2.jpg": "/stroyka/static/media/3-2.1073e2719459f8242343.jpg",
     "static/media/5-1.jpg": "/stroyka/static/media/5-1.7145d361bcb82a249229.jpg",
     "static/media/6-2.jpg": "/stroyka/static/media/6-2.044894f4eb91874b1cf9.jpg",
@@ -30,13 +30,14 @@
     "static/media/5-3.jpeg": "/stroyka/static/media/5-3.442f274e1e18b7df8b6b.jpeg",
     "static/media/4-3.jpg": "/stroyka/static/media/4-3.42dc8a170b7cd1f9f207.jpg",
     "static/media/2-1.jpg": "/stroyka/static/media/2-1.12929f6545bc03759e66.jpg",
+    "static/media/logo.png": "/stroyka/static/media/logo.2e6124ff712be678702e.png",
     "static/media/1-2.jpg": "/stroyka/static/media/1-2.b1e644dd41bde2d4ddcd.jpg",
     "index.html": "/stroyka/index.html",
-    "main.d6b6c070.css.map": "/stroyka/static/css/main.d6b6c070.css.map",
-    "main.e0299134.js.map": "/stroyka/static/js/main.e0299134.js.map"
+    "main.e617f64d.css.map": "/stroyka/static/css/main.e617f64d.css.map",
+    "main.5c663530.js.map": "/stroyka/static/js/main.5c663530.js.map"
   },
   "entrypoints": [
-    "static/css/main.d6b6c070.css",
-    "static/js/main.e0299134.js"
+    "static/css/main.e617f64d.css",
+    "static/js/main.5c663530.js"
   ]
 }
