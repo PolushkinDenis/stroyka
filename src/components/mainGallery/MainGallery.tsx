@@ -58,7 +58,7 @@ const MainGallery: FC = () => {
         <div className="mainGallery">
             <div className="galleryCol">
                 <div className="galleryItem" >
-                    <NavLink className="galleryItem__link" to='/stroyka'></NavLink>
+                    <NavLink className="galleryItem__link" to='/stroyka/designing'></NavLink>
                     <div className="galleryItem__img" style={{ backgroundImage: `url(${images[0]})` }}></div>
                     <div className="galleryItem__info">
                         <div className="galleryItem-title">Строительство домов</div>
@@ -68,7 +68,7 @@ const MainGallery: FC = () => {
             </div>
             <div className="galleryCol">
                 <div className="galleryItem" >
-                    <NavLink className="galleryItem__link" to='/stroyka'></NavLink>
+                    <NavLink className="galleryItem__link" to='/stroyka/designing'></NavLink>
                     <div className="galleryItem__img" style={{ backgroundImage: `url(${images[1]})` }}></div>
                     <div className="galleryItem__info">
                         <div className="galleryItem-title">Быстровозводимые дома</div>
@@ -78,7 +78,7 @@ const MainGallery: FC = () => {
             </div>
             <div className="galleryCol">
                 <div className="galleryItem" >
-                    <NavLink className="galleryItem__link" to='/stroyka'></NavLink>
+                    <NavLink className="galleryItem__link" to='/stroyka/services'></NavLink>
                     <div className="galleryItem__img" style={{ backgroundImage: `url(${images[2]})` }}></div>
                     <div className="galleryItem__info">
                         <div className="galleryItem-title">Ремонты</div>
@@ -88,7 +88,7 @@ const MainGallery: FC = () => {
             </div>
             <div className="galleryCol">
                 <div className="galleryItem" >
-                    <NavLink className="galleryItem__link" to='/stroyka'></NavLink>
+                    <NavLink className="galleryItem__link" to='/stroyka/designing'></NavLink>
                     <div className="galleryItem__img" style={{ backgroundImage: `url(${images[3]})` }}></div>
                     <div className="galleryItem__info">
                         <div className="galleryItem-title">Проектирование</div>
@@ -98,7 +98,7 @@ const MainGallery: FC = () => {
             </div>
             <div className="galleryCol">
                 <div className="galleryItem" >
-                    <NavLink className="galleryItem__link" to='/stroyka'></NavLink>
+                    <NavLink className="galleryItem__link" to='/stroyka/services'></NavLink>
                     <div className="galleryItem__img" style={{ backgroundImage: `url(${images[4]})` }}></div>
                     <div className="galleryItem__info">
                         <div className="galleryItem-title">Услуги</div>
@@ -108,7 +108,7 @@ const MainGallery: FC = () => {
             </div>
             <div className="galleryCol">
                 <div className="galleryItem" >
-                    <NavLink className="galleryItem__link" to='/stroyka'></NavLink>
+                    <NavLink className="galleryItem__link" to='/stroyka/services'></NavLink>
                     <div className="galleryItem__img" style={{ backgroundImage: `url(${images[5]})` }}></div>
                     <div className="galleryItem__info">
                         <div className="galleryItem-title">Ремонт квартир</div>
