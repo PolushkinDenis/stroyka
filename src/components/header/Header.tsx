@@ -15,6 +15,9 @@ import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import { NavLink } from "react-router-dom";
+import logo from '../../images/logo.png'
+import PhoneInTalkIcon from '@mui/icons-material/PhoneInTalk';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
 const Header: FC = () => {
     const [open, setState] = useState(false);
@@ -34,10 +37,10 @@ const Header: FC = () => {
         <header>
             <div className="header__main">
                 <NavLink to="/stroyka" className="header__logo">
-                    СТРОЙКА.РФ
+                    <img src={logo} /><span>СТРОЙКА.РФ</span>
                 </NavLink>
                 <div className="header__type">
-                    <div className="header__type-text">Проектно-строительная компания</div>
+                    <div className="header__type-text">Строительная компания</div>
                     <button className="header__type-button">САМАРА</button>
                 </div>
                 <div className="header__contacts">
@@ -81,7 +84,6 @@ const Header: FC = () => {
                         sx={{ mr: 2, display: { xs: 'block', md: 'none', }, }}>
                         <MenuIcon />
                     </IconButton>
-
                     <Drawer
                         sx={{ mt: 2 }}
                         anchor="left"
@@ -90,9 +92,15 @@ const Header: FC = () => {
                         onClose={toggleDrawer(false)}
                     >
                         <Box>
-                            <IconButton sx={{ mb: 2, mt: 2 }}>
-                                <CloseIcon onClick={toggleDrawer(false)} />
-                            </IconButton>
+                            <div className="mobile__header">
+                                <IconButton sx={{ mb: 2, mt: 2 }}>
+                                    <CloseIcon onClick={toggleDrawer(false)} />
+                                </IconButton>
+                                <NavLink to="/stroyka" onClick={toggleDrawer(false)}>
+                                    <img className="mobile__header-logo" src={logo} />
+                                    <span>СТРОЙКА.РФ</span>
+                                </NavLink>
+                            </div>
                             <Accordion>
                                 <AccordionSummary
                                     expandIcon={<ExpandMoreIcon sx={{ color: "#fff" }} />}
@@ -253,6 +261,14 @@ const Header: FC = () => {
                                     <NavLink onClick={toggleDrawer(false)} className="header__link" to="/stroyka/contacts">КОНТАКТЫ</NavLink>
                                 </Typography>
                             </div>
+                            <div className="header__mobil">
+                                <p>Строительная компания</p>
+                                <p>© 2023 Все права защищены.</p>
+                                <div className="header__mobil-links">
+                                    <NavLink target="_blank" to="https://wa.me/+79879876136"><WhatsAppIcon sx={{ color: "#333" }} /></NavLink>
+                                    <NavLink to="tel:+79879876136"><PhoneInTalkIcon sx={{ color: "#333" }} /></NavLink>
+                                </div>
+                            </div>
                         </Box>
                     </Drawer>
                 </div>
@@ -264,7 +280,7 @@ const Header: FC = () => {
                         <i className="fa fa-caret-down"></i>
                     </button>
                     <div className="dropdown-content">
-                    <div className="dropdown-content-mainLink"> 
+                        <div className="dropdown-content-mainLink">
                             <NavLink className="navigate__type-mainLink" to="/stroyka/designing">Проектирование</NavLink>
                             <div className="vl"></div>
                         </div>
@@ -284,7 +300,7 @@ const Header: FC = () => {
                         <i className="fa fa-caret-down"></i>
                     </button>
                     <div className="dropdown-content">
-                        <div className="dropdown-content-mainLink"> 
+                        <div className="dropdown-content-mainLink">
                             <NavLink className="navigate__type-mainLink" to="/stroyka/services">Услуги</NavLink>
                             <div className="vl"></div>
                         </div>
