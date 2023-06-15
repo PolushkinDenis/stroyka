@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/stroyka/static/css/main.e617f64d.css",
-    "main.js": "/stroyka/static/js/main.5c663530.js",
+    "main.css": "/stroyka/static/css/main.d86ffa37.css",
+    "main.js": "/stroyka/static/js/main.beace33f.js",
     "static/media/3-2.jpg": "/stroyka/static/media/3-2.1073e2719459f8242343.jpg",
     "static/media/5-1.jpg": "/stroyka/static/media/5-1.7145d361bcb82a249229.jpg",
     "static/media/6-2.jpg": "/stroyka/static/media/6-2.044894f4eb91874b1cf9.jpg",
@@ -33,11 +33,11 @@
     "static/media/logo.png": "/stroyka/static/media/logo.2e6124ff712be678702e.png",
     "static/media/1-2.jpg": "/stroyka/static/media/1-2.b1e644dd41bde2d4ddcd.jpg",
     "index.html": "/stroyka/index.html",
-    "main.e617f64d.css.map": "/stroyka/static/css/main.e617f64d.css.map",
-    "main.5c663530.js.map": "/stroyka/static/js/main.5c663530.js.map"
+    "main.d86ffa37.css.map": "/stroyka/static/css/main.d86ffa37.css.map",
+    "main.beace33f.js.map": "/stroyka/static/js/main.beace33f.js.map"
   },
   "entrypoints": [
-    "static/css/main.e617f64d.css",
-    "static/js/main.5c663530.js"
+    "static/css/main.d86ffa37.css",
+    "static/js/main.beace33f.js"
   ]
 }
