@@ -15,6 +15,9 @@
             color: #fff;
             font-weight: 700;
             border-radius: 3px;
+            @media (max-width: 890px) {
+                width: 100%;
+            }
         }
         .info-cont {
             display: flex;
