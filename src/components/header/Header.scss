@@ -132,9 +132,13 @@ header {
     }
 }
 .header__link,
-.phone-number {
+.phone-number,
+.header__link-main {
     text-decoration: none;
     color: #000;
+}
+.header__link-main {
+    font-weight: 900;
 }
 .contacts__mob-link {
     background-color: #ff8506;
@@ -176,10 +180,10 @@ header {
     header {
         .header__main {
             .header__logo {
-               span {
-                font-size: 14px;
-                padding: 0 0 0 10px;
-               }
+                span {
+                    font-size: 14px;
+                    padding: 0 0 0 10px;
+                }
             }
         }
     }

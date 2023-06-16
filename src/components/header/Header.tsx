@@ -18,6 +18,7 @@ import { NavLink } from "react-router-dom";
 import logo from '../../images/logo.png'
 import PhoneInTalkIcon from '@mui/icons-material/PhoneInTalk';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import { Divider } from "@mui/material";
 
 const Header: FC = () => {
     const [open, setState] = useState(false);
@@ -116,6 +117,12 @@ const Header: FC = () => {
                                     <Typography sx={{ fontFamily: `'Comfortaa', cursive` }}>ПРОЕКТИРОВАНИЕ</Typography>
                                 </AccordionSummary>
                                 <AccordionDetails>
+                                    <Typography sx={{ fontFamily: `'Comfortaa', cursive`, textDecoration: 'none', mt:2 }}>
+                                        <NavLink onClick={toggleDrawer(false)} className="header__link-main" to="/stroyka/designing">Проектирование</NavLink>
+                                    </Typography>
+                                </AccordionDetails>
+                                <Divider />
+                                <AccordionDetails>
                                     <Typography sx={{ fontFamily: `'Comfortaa', cursive`, textDecoration: 'none' }}>
                                         <NavLink onClick={toggleDrawer(false)} className="header__link" to="/stroyka/designing/carwash">Автомойки</NavLink>
                                     </Typography>
@@ -196,6 +203,12 @@ const Header: FC = () => {
                                     <Typography sx={{ fontFamily: `'Comfortaa', cursive` }}>УСЛУГИ</Typography>
                                 </AccordionSummary>
                                 <AccordionDetails>
+                                    <Typography sx={{ fontFamily: `'Comfortaa', cursive`, textDecoration: 'none', mt:2 }}>
+                                        <NavLink onClick={toggleDrawer(false)} className="header__link-main" to="/stroyka/services">Услуги</NavLink>
+                                    </Typography>
+                                </AccordionDetails>
+                                <Divider />
+                                <AccordionDetails>
                                     <Typography sx={{ fontFamily: `'Comfortaa', cursive`, textDecoration: 'none' }}>
                                         <NavLink onClick={toggleDrawer(false)} className="header__link" to="/stroyka/services/extension-to-the-house">Пристройка к дому</NavLink>
                                     </Typography>
@@ -220,6 +233,12 @@ const Header: FC = () => {
                                 >
                                     <Typography sx={{ fontFamily: `'Comfortaa', cursive` }}>РЕМОНТ</Typography>
                                 </AccordionSummary>
+                                <AccordionDetails>
+                                    <Typography sx={{ fontFamily: `'Comfortaa', cursive`, textDecoration: 'none', mt:2 }}>
+                                        <NavLink onClick={toggleDrawer(false)} className="header__link-main" to="/stroyka/repair">Ремонт</NavLink>
+                                    </Typography>
+                                </AccordionDetails>
+                                <Divider />
                                 <AccordionDetails>
                                     <Typography sx={{ fontFamily: `'Comfortaa', cursive`, textDecoration: 'none' }}>
                                         <NavLink onClick={toggleDrawer(false)} className="header__link" to="/stroyka/repair/remont_balcony">Ремонт балконных плит</NavLink>
