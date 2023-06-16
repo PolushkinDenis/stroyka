@@ -101,21 +101,11 @@ const Header: FC = () => {
                                     <span>СТРОЙКА.РФ</span>
                                 </NavLink>
                             </div>
-                            <Accordion>
-                                <AccordionSummary
-                                    expandIcon={<ExpandMoreIcon sx={{ color: "#fff" }} />}
-                                    aria-controls="panel1a-content"
-                                    id="panel1a-header"
-                                    sx={{ backgroundColor: '#ff8506', color: "#fff", fontFamily: `'Comfortaa', cursive` }}
-                                >
-                                    <Typography sx={{ fontFamily: `'Comfortaa', cursive` }}>О КОМПАНИИ</Typography>
-                                </AccordionSummary>
-                                <AccordionDetails>
-                                    <Typography sx={{ fontFamily: `'Comfortaa', cursive` }}>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                                    </Typography>
-                                </AccordionDetails>
-                            </Accordion>
+                            <div className="contacts__mob-link">
+                                <Typography sx={{ fontFamily: `'Comfortaa', cursive`, textDecoration: 'none' }}>
+                                    <NavLink onClick={toggleDrawer(false)} className="header__link" to="/stroyka">О КОМПАНИИ</NavLink>
+                                </Typography>
+                            </div>
                             <Accordion>
                                 <AccordionSummary
                                     expandIcon={<ExpandMoreIcon sx={{ color: "#fff" }} />}
@@ -181,7 +171,7 @@ const Header: FC = () => {
                                     </Typography>
                                 </AccordionDetails>
                             </Accordion>
-                            <Accordion>
+                            {/* <Accordion>
                                 <AccordionSummary
                                     expandIcon={<ExpandMoreIcon sx={{ color: "#fff" }} />}
                                     aria-controls="panel1a-content"
@@ -195,7 +185,7 @@ const Header: FC = () => {
                                         <NavLink onClick={toggleDrawer(false)} className="header__link" to="/stroyka">Скоро...</NavLink>
                                     </Typography>
                                 </AccordionDetails>
-                            </Accordion>
+                            </Accordion> */}
                             <Accordion>
                                 <AccordionSummary
                                     expandIcon={<ExpandMoreIcon sx={{ color: "#fff" }} />}
@@ -232,27 +222,27 @@ const Header: FC = () => {
                                 </AccordionSummary>
                                 <AccordionDetails>
                                     <Typography sx={{ fontFamily: `'Comfortaa', cursive`, textDecoration: 'none' }}>
-                                        <NavLink onClick={toggleDrawer(false)} className="header__link" to="/stroyka">Ремонт балконных плит</NavLink>
+                                        <NavLink onClick={toggleDrawer(false)} className="header__link" to="/stroyka/repair/remont_balcony">Ремонт балконных плит</NavLink>
                                     </Typography>
                                 </AccordionDetails>
                                 <AccordionDetails>
                                     <Typography sx={{ fontFamily: `'Comfortaa', cursive`, textDecoration: 'none' }}>
-                                        <NavLink onClick={toggleDrawer(false)} className="header__link" to="/stroyka">Капитальный ремонт квартир</NavLink>
+                                        <NavLink onClick={toggleDrawer(false)} className="header__link" to="/stroyka/repair/remont_zdaniy">Ремонт зданий</NavLink>
                                     </Typography>
                                 </AccordionDetails>
                                 <AccordionDetails>
                                     <Typography sx={{ fontFamily: `'Comfortaa', cursive`, textDecoration: 'none' }}>
-                                        <NavLink onClick={toggleDrawer(false)} className="header__link" to="/stroyka">Ремонт зданий</NavLink>
+                                        <NavLink onClick={toggleDrawer(false)} className="header__link" to="/stroyka/repair/remont_home">Ремонт частного дома</NavLink>
                                     </Typography>
                                 </AccordionDetails>
                                 <AccordionDetails>
                                     <Typography sx={{ fontFamily: `'Comfortaa', cursive`, textDecoration: 'none' }}>
-                                        <NavLink onClick={toggleDrawer(false)} className="header__link" to="/stroyka">Ремонт частного дома</NavLink>
+                                        <NavLink onClick={toggleDrawer(false)} className="header__link" to="/stroyka/repair/remont_krovel">Ремонт кровли</NavLink>
                                     </Typography>
                                 </AccordionDetails>
                                 <AccordionDetails>
                                     <Typography sx={{ fontFamily: `'Comfortaa', cursive`, textDecoration: 'none' }}>
-                                        <NavLink onClick={toggleDrawer(false)} className="header__link" to="/stroyka">Ремонт кровли</NavLink>
+                                        <NavLink onClick={toggleDrawer(false)} className="header__link" to="/stroyka/repair/remont_fasada">Ремонт фасада</NavLink>
                                     </Typography>
                                 </AccordionDetails>
                             </Accordion>
@@ -274,7 +264,7 @@ const Header: FC = () => {
                 </div>
             </div>
             <nav className="navbar">
-                <div className="nav-item ">О КОМПАНИИ</div>
+                <NavLink className="nav-item" to='/stroyka'>О КОМПАНИИ</NavLink>
                 <div className="dropdown">
                     <button className="dropbtn">ПРОЕКТИРОВАНИЕ
                         <i className="fa fa-caret-down"></i>
@@ -314,11 +304,16 @@ const Header: FC = () => {
                         <i className="fa fa-caret-down"></i>
                     </button>
                     <div className="dropdown-content">
-                        <NavLink className="navigate__type-link" to="/stroyka">Ремонт балконных плит</NavLink>
-                        <NavLink className="navigate__type-link" to="/stroyka">Пристройка гаража</NavLink>
-                        <NavLink className="navigate__type-link" to="/stroyka">Ремонт зданий</NavLink>
-                        <NavLink className="navigate__type-link" to="/stroyka">Ремонт частного дома</NavLink>
-                        <NavLink className="navigate__type-link" to="/stroyka">Ремонт кровли </NavLink>
+                    <div className="dropdown-content-mainLink">
+                            <NavLink className="navigate__type-mainLink" to="/stroyka/repair">Ремонт</NavLink>
+                            <div className="vl"></div>
+                        </div>
+                        <NavLink className="navigate__type-link" to="/stroyka/repair/remont_balcony">Ремонт балконных плит</NavLink>
+                        <NavLink className="navigate__type-link" to="/stroyka/repair/remont_zdaniy">Ремонт зданий</NavLink>
+                        <NavLink className="navigate__type-link" to="/stroyka/repair/remont_home">Ремонт частного дома</NavLink>
+                        <NavLink className="navigate__type-link" to="/stroyka/repair/remont_krovel">Ремонт кровли </NavLink>
+                        <NavLink className="navigate__type-link" to="/stroyka/repair/remont_fasada">Ремонт фасада </NavLink>
+
                     </div>
                 </div>
                 <NavLink to='/stroyka/contacts' className="nav-item">КОНТАКТЫ</NavLink>

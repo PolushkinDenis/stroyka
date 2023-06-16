@@ -32,7 +32,12 @@ const Breadcrumb: FC<BreadcrumbProps> = ({ title }) => {
         {name: "Услуги", value: "services"},
         {name: "Ленточный фундамент", value: "foundation"},
         {name: "О компании", value: "about"},
-  
+        {name: "Ремонт", value: "repair"},
+        {name: "Ремонт балконов", value: "remont_balcony"},
+        {name: "Ремонт зданий", value: "remont_zdaniy"},
+        {name: "Ремонт частного дома", value: "remont_home"},
+        {name: "Ремонт кровли", value: "remont_krovel"},
+        {name: "Ремонт фасада", value: "remont_fasada"},
     ]
 
     const createBreadcrumbs = () => {

@@ -18,6 +18,12 @@ import ServicesPage from './pages/service/servicesPage/ServicesPage';
 import Foundation from './pages/service/foundation/Foundation';
 import DisignPage from './pages/disign/disignPage/DisignPage';
 import AboutUs from './pages/uboutUs/AboutUs';
+import RepairBalcony from './pages/repair/repairBalcony/RepairBalcony';
+import RepairPage from './pages/repair/repairPage/RepairPage';
+import RepairZdaniy from './pages/repair/repairZdaniy/RepairZdaniy';
+import RepairHome from './pages/repair/repairHome/RepairHome';
+import RepairKrovli from './pages/repair/repairKrovli/RepairKrovli';
+import ReapirFasad from './pages/repair/reapirFasad/ReapirFasad';
 
 const App = () => {
   return (
@@ -45,7 +51,12 @@ const App = () => {
             <Route path="/stroyka/services/garage_extension" element={<GarageExtension />} />
             <Route path="/stroyka/services/foundation" element={<Foundation />} />
 
-            
+            <Route path="/stroyka/repair" element={<RepairPage />} />
+            <Route path="/stroyka/repair/remont_balcony" element={<RepairBalcony />} />
+            <Route path="/stroyka/repair/remont_zdaniy" element={<RepairZdaniy />} />
+            <Route path="/stroyka/repair/remont_home" element={<RepairHome />} />
+            <Route path="/stroyka/repair/remont_krovel" element={<RepairKrovli />} />
+            <Route path="/stroyka/repair/remont_fasada" element={<ReapirFasad />} />
           </>
       </Routes>
       <Footer />
