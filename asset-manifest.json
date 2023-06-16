@@ -1,14 +1,16 @@
 {
   "files": {
-    "main.css": "/stroyka/static/css/main.d86ffa37.css",
-    "main.js": "/stroyka/static/js/main.beace33f.js",
+    "main.css": "/stroyka/static/css/main.8652f34b.css",
+    "main.js": "/stroyka/static/js/main.fe2f1bf5.js",
     "static/media/3-2.jpg": "/stroyka/static/media/3-2.1073e2719459f8242343.jpg",
     "static/media/5-1.jpg": "/stroyka/static/media/5-1.7145d361bcb82a249229.jpg",
     "static/media/6-2.jpg": "/stroyka/static/media/6-2.044894f4eb91874b1cf9.jpg",
+    "static/media/repair_home.jpg": "/stroyka/static/media/repair_home.dc4b81c208545f73b470.jpg",
     "static/media/sooruzhenie.jpg": "/stroyka/static/media/sooruzhenie.a0b65f0144678eb84367.jpg",
     "static/media/extensionToTheHouse.jpg": "/stroyka/static/media/extensionToTheHouse.d6e45dc7165a76d1effc.jpg",
     "static/media/fundament.jpg": "/stroyka/static/media/fundament.e2e9aa13c9beebe92efb.jpg",
     "static/media/fasad.jpg": "/stroyka/static/media/fasad.472d229e5fb10a45239d.jpg",
+    "static/media/repair_fasada.jpeg": "/stroyka/static/media/repair_fasada.daec43709d308c490723.jpeg",
     "static/media/2-2.jpg": "/stroyka/static/media/2-2.99b62593283c0bb2d780.jpg",
     "static/media/3-1.jpg": "/stroyka/static/media/3-1.4578aff24ae6626e6166.jpg",
     "static/media/6-3.jpg": "/stroyka/static/media/6-3.56daec33cba0250b4761.jpg",
@@ -20,8 +22,11 @@
     "static/media/4-1.jpg": "/stroyka/static/media/4-1.f5d876bd0ea7ffb1fcdb.jpg",
     "static/media/avtomoyka.jpg": "/stroyka/static/media/avtomoyka.1b6cb9dffb666a963072.jpg",
     "static/media/1-3.jpg": "/stroyka/static/media/1-3.03cc98a6423d5699a1b1.jpg",
+    "static/media/balcony.jpeg": "/stroyka/static/media/balcony.8b597fca65bbccf3c32d.jpeg",
+    "static/media/repair_house.jpg": "/stroyka/static/media/repair_house.cbd3a03921ccbd18b745.jpg",
     "static/media/veranda.jpg": "/stroyka/static/media/veranda.213fe4d4ac213cc19940.jpg",
     "static/media/5-2.jpg": "/stroyka/static/media/5-2.6b003ffdc810ff9642e0.jpg",
+    "static/media/repair_krovli.jpg": "/stroyka/static/media/repair_krovli.01b04f021ecc74d62f35.jpg",
     "static/media/roof.jpg": "/stroyka/static/media/roof.2fba3c6c684810b9e58f.jpg",
     "static/media/garage.jpg": "/stroyka/static/media/garage.7412b5a54f0e202f50b5.jpg",
     "static/media/garage_extension.jpg": "/stroyka/static/media/garage_extension.5db9e7c908f651e9689c.jpg",
@@ -33,11 +38,11 @@
     "static/media/logo.png": "/stroyka/static/media/logo.2e6124ff712be678702e.png",
     "static/media/1-2.jpg": "/stroyka/static/media/1-2.b1e644dd41bde2d4ddcd.jpg",
     "index.html": "/stroyka/index.html",
-    "main.d86ffa37.css.map": "/stroyka/static/css/main.d86ffa37.css.map",
-    "main.beace33f.js.map": "/stroyka/static/js/main.beace33f.js.map"
+    "main.8652f34b.css.map": "/stroyka/static/css/main.8652f34b.css.map",
+    "main.fe2f1bf5.js.map": "/stroyka/static/js/main.fe2f1bf5.js.map"
   },
   "entrypoints": [
-    "static/css/main.d86ffa37.css",
-    "static/js/main.beace33f.js"
+    "static/css/main.8652f34b.css",
+    "static/js/main.fe2f1bf5.js"
   ]
 }
