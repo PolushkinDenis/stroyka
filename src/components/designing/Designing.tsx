@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { FC, useEffect } from 'react'
 import './Designing.scss'
 import Breadcrumb from '../breadcrumb/Breadcrumb'
 import OrderService from '../orderService/OrderService'
@@ -10,6 +10,9 @@ interface DesigningProps {
 }
 
 const Designing: FC<DesigningProps> = ({ image, title, children }) => {
+    useEffect(() => {
+        window.scrollTo(0, 100);
+    }, [])
     return (
         <>
             <Breadcrumb title={title} />
