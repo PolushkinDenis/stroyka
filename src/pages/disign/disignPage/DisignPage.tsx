@@ -1,4 +1,4 @@
-import {FC} from 'react'
+import {FC, useEffect} from 'react'
 import Breadcrumb from '../../../components/breadcrumb/Breadcrumb'
 import Menu from '../../../components/menu/Menu'
 import car_wash from '../../../images/disign/avtomoyka.jpg'
@@ -76,6 +76,9 @@ const servicesMenu: IMenu[] = [
 ]
 
 const DisignPage: FC = () => {
+    useEffect(() => {
+        window.scrollTo(0, 100)
+    }, [])
     return (
         <>
         <Breadcrumb title="Услуги в Самаре и области" />

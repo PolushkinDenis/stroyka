@@ -1,4 +1,4 @@
-import {FC} from 'react'
+import {FC, useEffect} from 'react'
 import Breadcrumb from '../../../components/breadcrumb/Breadcrumb'
 import Menu from '../../../components/menu/Menu'
 import { IMenu } from '../../../types/IMenu'
@@ -52,6 +52,10 @@ const RepairPage: FC = () => {
         { title: "Ремонт кровли", href: "remont_krovel" },
         { title: "Ремонт фасада", href: "remont_fasada" },
     ]
+
+    useEffect(() => {
+        window.scrollTo(0, 100)
+    }, [])
 
     return (
         <>

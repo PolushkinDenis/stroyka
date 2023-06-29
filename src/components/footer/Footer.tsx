@@ -24,14 +24,13 @@ const Footer: FC = () => {
 
                 <div className="content__box1">
                     <div className="box1">
-                        <NavLink to="/stroyka">ПРОЕКТИРОВАНИЕ</NavLink>
-                        <NavLink to="/stroyka">БЫСТРОВОЗВОДИМЫЕ <br />ЗДАНИЯ</NavLink>
-                        <NavLink to="/stroyka">УСЛУГИ</NavLink>
-                        <NavLink to="/stroyka">РЕМОНТ</NavLink>
+                        <NavLink to="/stroyka/designing">ПРОЕКТИРОВАНИЕ</NavLink>
+                        <NavLink to="/stroyka/services">УСЛУГИ</NavLink>
+                        <NavLink to="/stroyka/repair">РЕМОНТ</NavLink>
                     </div>
                     <div className="box1">
-                        <NavLink to="/stroyka">КОМПАНИЯ</NavLink>
-                        <NavLink to="/stroyka">КОНТАКТЫ</NavLink>
+                        <NavLink to="/stroyka/about">КОМПАНИЯ</NavLink>
+                        <NavLink to="/stroyka/contacts">КОНТАКТЫ</NavLink>
                     </div>
                 </div>
                 <div className="footer__contact">
